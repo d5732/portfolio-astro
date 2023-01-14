@@ -1,0 +1,10 @@
+---
+import { IContactProps } from "@types";
+import ContactCard from "./ContactCard.astro";
+
+const { email } = Astro.props as IContactProps;
+---
+
+<div class="my-16">
+    <ContactCard email={email} />
+</div>

@@ -3,6 +3,7 @@ export const info = {
     name: "Dennis Drueck",
     jobDescription: "Full-Stack Developer",
     about: `With 4 years of software development experience and 16 years of IT experience, I am a talented and seasoned professional. Through my successful projects and certifications, I have demonstrated mastery of computer science fundamentals and full-stack application development. My strong focus on teamwork and collaboration helps me ensure that goals are well defined and deadlines are met. Given my diverse background spanning multinational corporations, startups, and freelancing, I can readily excel in any environment.`,
+    email: "Denwa.dev@gmail.com",
 
     experience: [
         {

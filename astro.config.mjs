@@ -5,15 +5,15 @@ import sitemap from "@astrojs/sitemap";
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://astro-portfolio-uzair.vercel.app",
-  integrations: [
-    tailwind(),
-    sitemap({
-      changefreq: "weekly",
-      priority: 0.7,
-      lastmod: new Date(),
-      entryLimit: 10000,
-    }),
-    robotsTxt(),
-  ],
+    site: "https://denwa-dev.vercel.app/",
+    integrations: [
+        tailwind(),
+        sitemap({
+            changefreq: "weekly",
+            priority: 0.7,
+            lastmod: new Date(),
+            entryLimit: 10000,
+        }),
+        robotsTxt(),
+    ],
 });

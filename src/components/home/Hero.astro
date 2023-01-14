@@ -2,12 +2,26 @@
 import { IHeroProps } from "@types";
 
 const { name, about } = Astro.props as IHeroProps;
+// const res = await fetch("https://api.github.com/users/d5732");
+// const data = await res.json();
+const data = {
+    avatar_url: "https://avatars.githubusercontent.com/u/113398750?v=4",
+    bio: "Full-Stack Developer",
+};
+const { bio, avatar_url } = await data;
 ---
 
 <section>
-  <p class="dark:text-light mt-[117px]">Hey, I’m</p>
-  <h1>{name}</h1>
-  <p class="dark:text-light text-lg mb-16">
-    {about}
-  </p>
+    <div class="flex flex-wrap justify-between">
+        <div>
+            <h1 style="line-height:1.2;" class="mb-0 flex flex-wrap">
+                {name}
+            </h1>
+            <h2 class="dark:text-light mb-8">{bio}</h2>
+        </div>
+        <img class="mt-8 w-40 h-40 rounded-full" src={avatar_url} />
+    </div>
+    <p class="dark:text-light text-lg mt-10 mb-16">
+        {about}
+    </p>
 </section>
