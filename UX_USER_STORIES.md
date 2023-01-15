@@ -1,6 +1,8 @@
 -I want to visit the developer's portfolio website.
 
--The site should be responsive and work well on my mobile device, tablet, or desktop.
+-Site is WCAG WAI compliant.
+
+-Site is responsive and works well on mobile, tablet, and desktop.
 
 -I want to get a general feel for his development and design skills.
 
@@ -8,7 +10,7 @@
 
 -I want to see examples of his previous work.
 
--I want to contact him to schedule a consultation, and decide if I want to hire him for a project.
+-I want to contact him to schedule a consultation.
 
 -Resume present and available for download
 
