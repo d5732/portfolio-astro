@@ -56,7 +56,7 @@ export const info = {
             startDate: "08/08",
             endDate: "05/12",
             description: [
-                "Studied Web Design, Design Thinking, Perception Theory, Visual Communication",
+                "Studied web design, design thinking, visual communication",
             ],
         },
     ],

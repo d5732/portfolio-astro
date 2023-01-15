@@ -18,8 +18,10 @@ const { title, details } = Astro.props as IExperiences;
                             {item.startDate} - {item.endDate}
                         </p>
                     </div>
-                    <h3 class="text-xl  font-semibold">{item.name}</h3>
-                    <p class="text-sm mt-3 text-blue">{item.location}</p>
+                    <h3 class="text-xl font-semibold">{item.name}</h3>
+                    <p class="text-sm mt-3 text-darkblue dark:text-blue">
+                        {item.location}
+                    </p>
                     <ul class="mt-3">
                         {item.description.map((item) => (
                             <li class="dark:text-gray mb-1">{item}</li>
