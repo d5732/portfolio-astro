@@ -26,16 +26,19 @@ const featureProjects = info.projects.map((project, index) => {
     <body>
         <Layout>
             <Hero name={info.name} about={info.about} />
-
             <Experience title={"EXPERIENCE"} details={info.experience} />
             <Experience title={"EDUCATION"} details={info.education} />
+            <Experience
+                title={"CERTIFICATIONS"}
+                details={info.certifications}
+            />
             <div class="flex">
                 <a
                     target="_blank"
                     href="assets/resume/Dennis Drueck FastTrack Resume 2023.1.10.pdf"
                     aria-label="download-resume"
                     id="download-resume"
-                    class="dark:text-light rounded-lg -mt-4 p-4 bg-slate-100 dark:bg-[#202020]"
+                    class="dark:text-light rounded-lg mb-16 p-4 bg-slate-100 dark:bg-[#202020]"
                 >
                     <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -57,7 +60,7 @@ const featureProjects = info.projects.map((project, index) => {
             </div>
             <section>
                 <h2 class="w-[15rem] dark:text-light mt-16">
-                    FEATURE PROJECTS
+                    FEATURED PROJECTS
                 </h2>
                 <ProjectsWrapper projects={featureProjects} />
             </section>

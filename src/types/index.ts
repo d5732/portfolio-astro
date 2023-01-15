@@ -15,6 +15,7 @@ export interface IContactProps {
 
 export interface IExperience {
     name: string;
+    title?: string;
     location: string;
     startDate: string;
     endDate: string;
