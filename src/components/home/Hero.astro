@@ -4,13 +4,24 @@ import { IHeroProps } from "@types";
 const { name, about } = Astro.props as IHeroProps;
 // const res = await fetch("https://api.github.com/users/d5732");
 // const data = await res.json();
-const data = {
-    avatar_url: "https://avatars.githubusercontent.com/u/113398750?v=4",
-    bio: "Full-Stack Developer",
-};
-const { bio, avatar_url } = await data;
+// // const data = {
+// //     avatar_url: "https://avatars.githubusercontent.com/u/113398750?v=4",
+// //     bio: "Full-Stack Developer",
+// // };
+// const { bio, avatar_url } = await data;
 ---
 
+<script is:inline>
+    fetch("https://api.github.com/users/d5732")
+        .then((res) => res.json())
+        .then((data) => {
+            console.log("fetched data:", data);
+            document.getElementById("bio").innerText = data.bio;
+            document
+                .getElementById("avatar")
+                .setAttribute("src", data.avatar_url);
+        });
+</script>
 <section>
     <div class="flex flex-wrap justify-between mt-[117px]">
         <div class="dark:text-light">
@@ -18,9 +29,9 @@ const { bio, avatar_url } = await data;
             <h1 style="line-height:1.2;" class="mb-0 flex flex-wrap">
                 {name}
             </h1>
-            <h2 class="dark:text-light mb-8">{bio}</h2>
+            <h2 id="bio" class="dark:text-light mb-8">bio</h2>
         </div>
-        <img class="mt-8 w-40 h-40 rounded-full" src={avatar_url} />
+        <img class="mt-8 w-40 h-40 rounded-full" id="avatar" alt="" />
     </div>
     <p class="dark:text-light text-lg mt-10 mb-16">
         {about}
