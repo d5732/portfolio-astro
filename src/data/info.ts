@@ -93,16 +93,16 @@ export const info = {
             githubUrl: "https://github.com/d5732/portfolio-astro",
         },
         {
-            title: "TrapMonkie.io",
-            isFeatured: true,
-            thumbnail: "/assets/images/trapmonkie-site.png",
-            liveUrl: "https://trapmonkie.io/",
-        },
-        {
             title: "MAT Action",
             isFeatured: true,
             thumbnail: "/assets/images/mataction-site.jpg",
             liveUrl: "https://www.mataction.com/",
+        },
+        {
+            title: "TrapMonkie.io",
+            isFeatured: true,
+            thumbnail: "/assets/images/trapmonkie-site.png",
+            liveUrl: "https://trapmonkie.io/",
         },
         {
             title: "EthereumHomies.com",
