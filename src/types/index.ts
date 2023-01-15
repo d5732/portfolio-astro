@@ -30,9 +30,13 @@ export interface IProject {
     title: string;
     isFeatured: boolean;
     thumbnail: string;
+    image: string;
     githubUrl: string;
     liveUrl: string;
+    description: string[];
+    environment: string[];
 }
+
 export interface IProjects {
     projects: IProject[];
 }

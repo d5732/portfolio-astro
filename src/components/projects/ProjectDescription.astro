@@ -1,13 +1,12 @@
 ---
 import { IExperiences } from "@types";
 
-const { title, details } = Astro.props as IExperiences;
+const { details } = Astro.props as IExperiences;
 ---
 
 <section
     class="flex items-start justify-between flex-col sm:flex-row dark:text-light"
 >
-    <h2 class="w-[15rem] mt-16">{title}</h2>
     <div class="w-full">
         {
             details.map((item) => (
@@ -24,9 +23,7 @@ const { title, details } = Astro.props as IExperiences;
                     </p>
                     <ul class="mt-3">
                         {item.description.map((item) => (
-                            <li class="list-disc dark:text-gray mb-2">
-                                <div>{item}</div>
-                            </li>
+                            <li class="dark:text-gray mb-1">{item}</li>
                         ))}
                     </ul>
                 </div>

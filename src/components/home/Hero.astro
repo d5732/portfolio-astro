@@ -23,15 +23,18 @@ const { name, about } = Astro.props as IHeroProps;
         });
 </script>
 <section>
-    <div class="flex flex-wrap justify-between mt-[117px]">
+    <div class="flex flex-wrap justify-between mt-[141px]">
         <div class="dark:text-light">
-            <p>Hello, I am</p>
-            <h1 style="line-height:1.2;" class="mb-0 flex flex-wrap">
+            <h1 class="mb-0 flex flex-wrap">
                 {name}
             </h1>
-            <h2 id="bio" class="dark:text-light mb-8">bio</h2>
+            <h2 id="bio" class="dark:text-light mb-0">bio</h2>
         </div>
-        <img class="mt-8 w-40 h-40 rounded-full" id="avatar" alt="" />
+        <img
+            class="mt-8 ml-8 mr-auto w-24 h-24 rounded-full"
+            id="avatar"
+            alt=""
+        />
     </div>
     <p class="dark:text-light text-lg mt-10 mb-16">
         {about}

@@ -4,10 +4,10 @@ import { info } from "@data";
 import Layout from "@layouts/Layout.astro";
 import Hero from "@components/home/Hero.astro";
 import Experience from "@components/home/Experience.astro";
-import ProjectsWrapper from "@components/general/ProjectsWrapper.astro";
+import ProjectsWrapper from "@components/home/ProjectsWrapper.astro";
 import MetaHead from "@components/general/MetaHead.astro";
 
-const featureProjects = info.projects.map((project, index) => {
+const featuredProjects = info.projects.map((project, index) => {
     if (project.isFeatured && index < 6) {
         return project;
     }
@@ -50,19 +50,20 @@ const featureProjects = info.projects.map((project, index) => {
                         stroke-width="2"
                         stroke-linecap="round"
                         stroke-linejoin="round"
-                        class="inline feather feather-download"
+                        class="inline feather feather-download pb-[3px]"
                         ><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"
                         ></path><polyline points="7 10 12 15 17 10"
                         ></polyline><line x1="12" y1="15" x2="12" y2="3"
                         ></line></svg
-                    > Download Resume
+                    >
+                    <span class="ml-1">Download My Resume</span>
                 </a>
             </div>
             <section>
                 <h2 class="w-[15rem] dark:text-light mt-16">
                     FEATURED PROJECTS
                 </h2>
-                <ProjectsWrapper projects={featureProjects} />
+                <ProjectsWrapper projects={featuredProjects} />
             </section>
         </Layout>
     </body>

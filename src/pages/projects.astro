@@ -1,11 +1,12 @@
 ---
 import { info } from "@data";
+import { IProjects } from "@types";
 
-import ProjectsWrapper from "@components/general/ProjectsWrapper.astro";
 import MetaHead from "@components/general/MetaHead.astro";
 import Layout from "@layouts/Layout.astro";
+import ProjectArticle from "@components/projects/ProjectArticle.astro";
 
-const Projects = info.projects.map((project) => project);
+const { projects } = info as IProjects;
 ---
 
 <!DOCTYPE html>
@@ -20,8 +21,16 @@ const Projects = info.projects.map((project) => project);
 
     <body>
         <Layout>
-            <h1 style="line-height: 1.2;">Projects</h1>
-            <ProjectsWrapper projects={Projects} />
+            <section>
+                <h1 style="line-height: 1.2;">Projects</h1>
+                <div class="grid grid-cols-1 gap-4 my-16">
+                    {
+                        projects.map((project) => (
+                            <ProjectArticle projectDetail={project} />
+                        ))
+                    }
+                </div>
+            </section>
         </Layout>
     </body>
 </html>
