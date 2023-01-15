@@ -1,11 +1,12 @@
 ---
 import { info } from "@data";
 
-import ContactWrapper from "@components/general/ContactWrapper.astro";
 import MetaHead from "@components/general/MetaHead.astro";
 import Layout from "@layouts/Layout.astro";
+import { IContactProps } from "@types";
 
-const { email } = info;
+const { email } = info as IContactProps;
+const pClasses = "dark:text-light text-lg";
 ---
 
 <!DOCTYPE html>
@@ -21,7 +22,25 @@ const { email } = info;
     <body>
         <Layout>
             <h1 style="line-height: 1.2;">Contact</h1>
-            <ContactWrapper email={email} />
+            <div class="my-16">
+                <section
+                    class="w-full max-h-[25rem] overflow-hidden relative group"
+                >
+                    <p class={`${pClasses}`}>Let's collaborate!</p>
+                    <p class={`${pClasses} mb-8`}>
+                        Contact me at <a
+                            class="font-bold dark:text-light"
+                            href={`mailto:${email}`}>{email}</a
+                        > to set up a meeting.
+                    </p>
+                    <p class={pClasses}>All consultations are free.</p><p
+                        class={pClasses}
+                    >
+                        We will discuss your project's goals, timeline, and
+                        estimated costs.
+                    </p>
+                </section>
+            </div>
         </Layout>
     </body>
 </html>
