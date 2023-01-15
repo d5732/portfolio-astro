@@ -25,8 +25,11 @@ const { projects } = info as IProjects;
                 <h1 style="line-height: 1.2;">Projects</h1>
                 <div class="grid grid-cols-1 gap-4 my-16">
                     {
-                        projects.map((project) => (
-                            <ProjectArticle projectDetail={project} />
+                        projects.map((project, index) => (
+                            <ProjectArticle
+                                projectDetail={project}
+                                isLazy={index > 0}
+                            />
                         ))
                     }
                 </div>
