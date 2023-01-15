@@ -1,45 +1,4 @@
-# Portfolio Website - Astro
-
-Just change `src/data/info.ts` to get your personal portfolio.
-
-## portfolio template for Developers!
-
-![Feature Image](./public/assets/images/astro-portfolio.png)
-
-## 🚀 Project Structure
-
-Inside of your Astro project, you'll see the following folders and files:
-
-```
-/
-├── public/
-│   ├── assets
-│   │   ├── fonts
-|   |   └── images
-│   └── favicon.ico
-├── src/
-│   ├── components/
-│   │   ├── home/
-|   |   └── general/
-|   |       ├── Header.astro
-|   |       ├── Footer.astro
-|   |       └── ...
-│   ├── data/
-│   ├── layouts/
-│   |   |── Layout.astro
-│   |   └── ...
-│   ├── pages/
-│   |   ├── peojects.astro
-│   |   ├── index.astro
-│   ├── styles/
-│   |   |── custom-styles.css
-│   |   |── fonts.css
-│   |   └── styles.css
-│   ├── types/
-│   ├── utils/
-├── package.json
-└── ...
-```
+# Deployed to: https://denwa-dev.vercel.app/
 
 Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
 
@@ -47,7 +6,7 @@ There's nothing special about `src/components/`, but that's where we like to put
 
 Any static assets, like images, can be placed in the `public/assets` directory.
 
-Your personal data would be go on `src/data` directory.
+External strings are in `src/data` directory.
 
 ## 🧞 Commands
 
@@ -62,6 +21,4 @@ All commands are run from the root of the project, from a terminal:
 | `npm run astro ...`    | Run CLI commands like `astro add`, `astro check` |
 | `npm run astro --help` | Get help using the Astro CLI                     |
 
-## 👀 Want to learn more?
-
-Feel free to check [Astro documentation](https://docs.astro.build) or jump into Astro [Discord server](https://astro.build/chat).
+[Astro documentation](https://docs.astro.build)
