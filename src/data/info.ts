@@ -137,6 +137,41 @@ export const info = {
                 "cPanel",
             ],
         },
+        // Twitter Clone API
+
+        // Environment:
+
+        {
+            title: "Twitter Clone API",
+            isFeatured: true,
+            thumbnail:
+                "/assets/images/project-thumbnails/twitter-clone-api-sm.jpg",
+            image: "/assets/images/project-thumbnails/twitter-clone-api.jpg",
+            githubUrl: "https://github.com/d5732/twitter-clone-api",
+            description: [
+                "Created a Java Spring back-end for a RESTful web service with 30 HTTP endpoints to CRUD data related to accounts, tweets, hashtags, likes, follows, replies, and reposts.",
+                "Tested and debugged API functionality using IntelliJ debugger, SQL Shell, and Postman, enabling rapid development of endpoints.",
+                "Led a 3-developer team in a 1-week sprint, prioritizing critical tasks via Kanban.",
+                "Reviewed, tested, and merged git branch pull requests.",
+                "Implemented services, data models, repositories, and controllers using Spring Boot and JPA, including data validation, error handling, and reusable functions.",
+            ],
+            environment: [
+                "PostgreSQL",
+                "Java 17",
+                "Maven",
+                "Spring Boot",
+                "JPA",
+                "JDBC",
+                "Lombok",
+                "MapStruct",
+                "Spring Web",
+                "Apache Tomcat",
+                "Postman",
+                "Git",
+                "GitHub",
+            ],
+        },
+
         {
             title: "TrapMonkie.io",
             isFeatured: true,
