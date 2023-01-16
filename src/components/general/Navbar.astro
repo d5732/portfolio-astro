@@ -1,6 +1,7 @@
 ---
 import { info } from "@data";
 import { createLogo } from "@utils";
+import MobileMenu from "./MobileMenu.astro";
 ---
 
 <header
@@ -13,26 +14,38 @@ import { createLogo } from "@utils";
     </a>
     <nav>
         <ul class="flex items-center">
+            {
+                info.pages.map((item) => (
+                    <li>
+                        <a
+                            class="hidden sm:block p-4 dark:text-light text-lg"
+                            href={`/${item}`}
+                        >
+                            {item.charAt(0).toUpperCase() + item.slice(1)}
+                        </a>
+                    </li>
+                ))
+            }
             <li>
-                <a class="p-4 dark:text-light block text-lg" href="/projects"
-                    >Projects</a
+                <button
+                    aria-label="mobile-menu-button"
+                    id="mobile-menu-button"
+                    class="sm:hidden block p-4 dark:text-light text-lg"
                 >
-            </li>
-            <li>
-                <a class="p-4 dark:text-light block text-lg" href="/contact"
-                    >Contact</a
-                >
+                    Menu
+                </button>
             </li>
             <li>
                 <button
                     aria-label="theme-button"
                     id="theme-button"
-                    class="dark:text-light rounded-lg p-4 ml-2 bg-slate-200 dark:bg-[#202020]"
+                    class="p-4 ml-2 dark:text-light bg-slate-200 dark:bg-[#202020] rounded-lg"
                 ></button>
             </li>
         </ul>
     </nav>
 </header>
+<MobileMenu />
 
 <script is:inline>
     const moon = `<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-moon"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>`;

@@ -1,0 +1,32 @@
+---
+import { info } from "@data";
+---
+
+<nav
+    id="mobile-menu-nav"
+    class="hidden absolute w-full top-[80px] sm:top-[123px] h-min bottom-0 right-0 z-20 backdrop-blur-xl"
+>
+    <ul class="container flex flex-wrap justify-between">
+        {
+            info.pages.map((item) => (
+                <li>
+                    <a
+                        class="block p-4 dark:text-light text-lg"
+                        href={`/${item}`}
+                    >
+                        {item.charAt(0).toUpperCase() + item.slice(1)}
+                    </a>
+                </li>
+            ))
+        }
+    </ul>
+</nav>
+
+<script>
+    const toggleMobileMenuNav = () => {
+        document.getElementById("mobile-menu-nav").classList.toggle("hidden");
+    };
+    document
+        .getElementById("mobile-menu-button")
+        .addEventListener("click", toggleMobileMenuNav);
+</script>

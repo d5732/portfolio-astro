@@ -1,10 +1,26 @@
 export const info = {
+    pages: ["about", "contact", "projects"],
     ogImageUrl: "android-chrome-512x512.png",
     baseUrl: "",
     name: "Dennis Drueck",
     jobDescription: "Full-Stack Developer",
-    about: `With 4 years of software development experience and 16 years of IT experience, I am a talented and seasoned professional. Through my successful projects and certifications, I have demonstrated mastery of computer science fundamentals and full-stack application development. My strong focus on teamwork and collaboration helps me ensure that goals are well defined and deadlines are met. Given my diverse background spanning multinational corporations, startups, and freelancing, I can readily excel in any environment.`,
     email: "Denwa.dev@gmail.com",
+    socialMedia: {
+        github: "https://github.com/d5732",
+        email: "Denwa.dev@gmail.com",
+        linkedin: "https://www.linkedin.com/in/dennis-d-58764754/",
+    },
+    about: `With 4 years of software development experience and 16 years of IT experience, I am a talented and seasoned professional. Through my successful projects and certifications, I have demonstrated mastery of computer science fundamentals and full-stack application development. My strong focus on teamwork and collaboration helps me ensure that goals are well defined and deadlines are met. Given my diverse background spanning multinational corporations, startups, and freelancing, I can readily excel in any environment.`,
+    aboutFull: [
+        "About ipsum lala ipsum lala ipsum lala ipsum lala ipsum lala ipsum lala ipsum lala ipsum lala ipsum lala ipsum lala ipsum lala. About ipsum lala ipsum lala ipsum lala ipsum lala ipsum lala ipsum lala ipsum lala ipsum lala ipsum lala ipsum lala ipsum lala.About ipsum lala ipsum lala ipsum lala ipsum lala ipsum lala ipsum lala ipsum lala ipsum lala ipsum lala ipsum lala ipsum lala.About ipsum lala ipsum lala ipsum lala ipsum lala ipsum lala ipsum lala ipsum lala ipsum lala ipsum lala ipsum lala ipsum lala.About ipsum lala ipsum lala ipsum lala ipsum lala ipsum lala ipsum lala ipsum lala ipsum lala ipsum lala ipsum lala ipsum lala.About ipsum lala ipsum lala ipsum lala ipsum lala ipsum lala ipsum lala ipsum lala ipsum lala ipsum lala ipsum lala ipsum lala. ",
+        "About ipsum lala ipsum lala ipsum lala ipsum lala ipsum lala ipsum lala ipsum lala ipsum lala ipsum lala ipsum lala ipsum lala. About ipsum lala ipsum lala ipsum lala ipsum lala ipsum lala ipsum lala ipsum lala ipsum lala ipsum lala ipsum lala ipsum lala.About ipsum lala ipsum lala ipsum lala ipsum lala ipsum lala ipsum lala ipsum lala ipsum lala ipsum lala ipsum lala ipsum lala.About ipsum lala ipsum lala ipsum lala ipsum lala ipsum lala ipsum lala ipsum lala ipsum lala ipsum lala ipsum lala ipsum lala.About ipsum lala ipsum lala ipsum lala ipsum lala ipsum lala ipsum lala ipsum lala ipsum lala ipsum lala ipsum lala ipsum lala.About ipsum lala ipsum lala ipsum lala ipsum lala ipsum lala ipsum lala ipsum lala ipsum lala ipsum lala ipsum lala ipsum lala. ",
+        "About ipsum lala ipsum lala ipsum lala ipsum lala ipsum lala ipsum lala ipsum lala ipsum lala ipsum lala ipsum lala ipsum lala. About ipsum lala ipsum lala ipsum lala ipsum lala ipsum lala ipsum lala ipsum lala ipsum lala ipsum lala ipsum lala ipsum lala.About ipsum lala ipsum lala ipsum lala ipsum lala ipsum lala ipsum lala ipsum lala ipsum lala ipsum lala ipsum lala ipsum lala.About ipsum lala ipsum lala ipsum lala ipsum lala ipsum lala ipsum lala ipsum lala ipsum lala ipsum lala ipsum lala ipsum lala.About ipsum lala ipsum lala ipsum lala ipsum lala ipsum lala ipsum lala ipsum lala ipsum lala ipsum lala ipsum lala ipsum lala.About ipsum lala ipsum lala ipsum lala ipsum lala ipsum lala ipsum lala ipsum lala ipsum lala ipsum lala ipsum lala ipsum lala. ",
+        "About ipsum lala ipsum lala ipsum lala ipsum lala ipsum lala ipsum lala ipsum lala ipsum lala ipsum lala ipsum lala ipsum lala. About ipsum lala ipsum lala ipsum lala ipsum lala ipsum lala ipsum lala ipsum lala ipsum lala ipsum lala ipsum lala ipsum lala.About ipsum lala ipsum lala ipsum lala ipsum lala ipsum lala ipsum lala ipsum lala ipsum lala ipsum lala ipsum lala ipsum lala.About ipsum lala ipsum lala ipsum lala ipsum lala ipsum lala ipsum lala ipsum lala ipsum lala ipsum lala ipsum lala ipsum lala.About ipsum lala ipsum lala ipsum lala ipsum lala ipsum lala ipsum lala ipsum lala ipsum lala ipsum lala ipsum lala ipsum lala.About ipsum lala ipsum lala ipsum lala ipsum lala ipsum lala ipsum lala ipsum lala ipsum lala ipsum lala ipsum lala ipsum lala. ",
+        "About ipsum lala ipsum lala ipsum lala ipsum lala ipsum lala ipsum lala ipsum lala ipsum lala ipsum lala ipsum lala ipsum lala. About ipsum lala ipsum lala ipsum lala ipsum lala ipsum lala ipsum lala ipsum lala ipsum lala ipsum lala ipsum lala ipsum lala.About ipsum lala ipsum lala ipsum lala ipsum lala ipsum lala ipsum lala ipsum lala ipsum lala ipsum lala ipsum lala ipsum lala.About ipsum lala ipsum lala ipsum lala ipsum lala ipsum lala ipsum lala ipsum lala ipsum lala ipsum lala ipsum lala ipsum lala.About ipsum lala ipsum lala ipsum lala ipsum lala ipsum lala ipsum lala ipsum lala ipsum lala ipsum lala ipsum lala ipsum lala.About ipsum lala ipsum lala ipsum lala ipsum lala ipsum lala ipsum lala ipsum lala ipsum lala ipsum lala ipsum lala ipsum lala. ",
+        "About ipsum lala ipsum lala ipsum lala ipsum lala ipsum lala ipsum lala ipsum lala ipsum lala ipsum lala ipsum lala ipsum lala ",
+        "About ipsum lala ipsum lala ipsum lala ipsum lala ipsum lala ipsum lala ipsum lala ipsum lala ipsum lala ipsum lala ipsum lala ",
+        "About ipsum lala ipsum lala ipsum lala ipsum lala ipsum lala ipsum lala ipsum lala ipsum lala ipsum lala ipsum lala ipsum lala ",
+    ],
 
     experience: [
         {
@@ -79,12 +95,6 @@ export const info = {
         },
     ],
 
-    socialMedia: {
-        github: "https://github.com/d5732",
-        email: "Denwa.dev@gmail.com",
-        linkedin: "https://www.linkedin.com/in/dennis-d-58764754/",
-    },
-
     projects: [
         {
             title: "Astro Portfolio",
@@ -137,10 +147,6 @@ export const info = {
                 "cPanel",
             ],
         },
-        // Twitter Clone API
-
-        // Environment:
-
         {
             title: "Twitter Clone API",
             isFeatured: true,
@@ -171,7 +177,6 @@ export const info = {
                 "GitHub",
             ],
         },
-
         {
             title: "TrapMonkie.io",
             isFeatured: true,
