@@ -119,6 +119,7 @@ export const info = {
             description: [
                 "Implemented responsiveness to 50+ views and components using PHP, Blade, Bootstrap and custom CSS, extrapolating design philosophy from a source Figma to unify visuals.",
                 "Optimized pagespeed through lazy-loading and asset optimization strategies.",
+                "Automated background-color generation for logo images parsing .CSV files, scraping and processing CDN images, and writing outputs to .CSV using Node.js, colorthief, and tinycolor2. This allowed for easy insertion of hexcolors into MySQL database based on UUID.",
             ],
             environment: [
                 "MySQL",
@@ -126,6 +127,7 @@ export const info = {
                 "Blade",
                 "Symfony",
                 "JavaScript",
+                "Node.js",
                 "jQuery",
                 "Bootstrap",
                 "CSS3",
