@@ -94,7 +94,9 @@ const { isLazy } = Astro.props;
             description && (
                 <ul>
                     {description.map((item) => (
-                        <li class="list-disc dark:text-light mb-2">{item}</li>
+                        <li class="sm:list-disc dark:text-light mb-2">
+                            {item}
+                        </li>
                     ))}
                 </ul>
             )
