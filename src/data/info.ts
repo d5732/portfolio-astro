@@ -119,7 +119,7 @@ export const info = {
             description: [
                 "Implemented responsiveness to 50+ views and components using PHP, Blade, Bootstrap and custom CSS, extrapolating design philosophy from a source Figma to unify visuals.",
                 "Optimized pagespeed through lazy-loading and asset optimization strategies.",
-                "Automated background-color generation for logo images parsing .CSV files, scraping and processing CDN images, and writing outputs to .CSV using Node.js, colorthief, and tinycolor2. This allowed for easy insertion of hexcolors into MySQL database based on UUID.",
+                "Automated logo background-color generation by scraping CDN and processing images using Node.js, colorthief, tinycolor2, and a custom color modulation algorithm. This enabled easy hexcolor insertion into MySQL database based on entity UUID.",
             ],
             environment: [
                 "MySQL",
@@ -147,7 +147,7 @@ export const info = {
             description: [
                 "Delivered MVP in 1 week, and 2 major updates within 1 week of requirements approval.",
                 "Authenticated transactions efficiently with merkletreejs to save users money on fees.",
-                "Built CI/CD pipeline via GitHub integration on Cloudflare Pages JAMstack.",
+                "Built CI/CD pipeline via GitHub integration on Cloudflare Pages Jamstack.",
                 "Imported real-time data and performed asynchronous transactions via Ethereum's JSON RPC API using web3.js, providing error-proofing and ease-of-access.",
                 "Optimized cross-platform user-experiences with responsive and adaptive design, lazy-loading, and asset optimization.",
             ],
@@ -173,11 +173,11 @@ export const info = {
             image: "/assets/images/project-thumbnails/ethereumhomies-site.jpg",
             liveUrl: "https://ethereumhomies.com/",
             description: [
-                "Overcame poor documentation of blockchain APIs through thorough exploration.",
+                "Overcame poor documentation of blockchain APIs through research, successfully implementing P0 requirements.",
                 "Enabled my client to capture explosive market growth by delivering MVP in 5 days.",
-                "Authorized users with web3.js to access their asset library, saving the company time by allowing customers to self-serve their purchased assets.",
+                "Authorized users to access a self-service portal for purchased assets using web3.js, eliminating cumbersome delivery efforts.",
                 "Created a 3D glTF model viewer built with react-three-fiber.",
-                "Deployed builds in seconds using CI/CD via GitHub integration on Netlify JAMstack.",
+                "Deployed builds using CI/CD via GitHub integration on Netlify Jamstack.",
             ],
             environment: [
                 "Three.js",
