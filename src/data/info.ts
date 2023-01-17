@@ -1,7 +1,7 @@
 export const info = {
     pages: ["about", "contact", "projects"],
-    ogImageUrl: "android-chrome-512x512.png",
-    baseUrl: "",
+    ogImageUrl: "/android-chrome-512x512.png",
+    baseUrl: "https://denwa-dev.vercel.app/",
     name: "Dennis Drueck",
     jobDescription: "Full-Stack Developer",
     email: "Denwa.dev@gmail.com",
