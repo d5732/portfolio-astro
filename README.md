@@ -1,5 +1,12 @@
 # Deployed to: https://denwa-dev.vercel.app/
 
+## Dependencies
+
+Target Node.js version: v18.12.1
+Target npm version: 8.19.2
+
+## Structure
+
 Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
 
 There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
