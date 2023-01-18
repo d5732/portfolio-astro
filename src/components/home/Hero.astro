@@ -1,7 +1,7 @@
 ---
 import { IHeroProps } from "@types";
 
-const { name, about } = Astro.props as IHeroProps;
+const { name, summary } = Astro.props as IHeroProps;
 // const res = await fetch("https://api.github.com/users/d5732");
 // const data = await res.json();
 // // const data = {
@@ -37,6 +37,6 @@ const { name, about } = Astro.props as IHeroProps;
         />
     </div>
     <p class="dark:text-light text-lg mt-10 mb-16">
-        {about}
+        {summary}
     </p>
 </section>

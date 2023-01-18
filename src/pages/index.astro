@@ -19,13 +19,13 @@ const featuredProjects = info.projects.map((project, index) => {
     <head>
         <MetaHead
             title={"Portfolio"}
-            description={"Full-stack developer with 4 years of experience. Proficient in PERN, Java and Python."}
+            description={info.metaDescriptions.home}
             ogImageUrl={info.ogImageUrl}
         />
     </head>
     <body>
         <Layout>
-            <Hero name={info.name} about={info.about} />
+            <Hero name={info.name} summary={info.summary} />
             <Experience title={"EXPERIENCE"} details={info.experience} />
             <Experience title={"EDUCATION"} details={info.education} />
             <Experience
@@ -35,7 +35,7 @@ const featuredProjects = info.projects.map((project, index) => {
             <div class="flex">
                 <a
                     target="_blank"
-                    href="assets/resume/Dennis Drueck FastTrack Resume 2023.1.10.pdf"
+                    href={info.resumeUrl}
                     aria-label="download-resume"
                     id="download-resume"
                     class="dark:text-light rounded-lg mb-16 p-4 bg-slate-200 dark:bg-[#202020]"

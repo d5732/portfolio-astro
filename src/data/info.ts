@@ -1,7 +1,14 @@
 export const info = {
-    pages: ["about", "contact", "projects"],
-    ogImageUrl: "/android-chrome-512x512.png",
     baseUrl: "https://denwa-dev.vercel.app/",
+    ogImageUrl: "/android-chrome-512x512.png",
+    resumeUrl: "assets/resume/Dennis Drueck FastTrack Resume 2023.1.18.pdf",
+    pages: ["about", "contact", "projects"],
+    metaDescriptions: {
+        home: "Full-stack developer with 4 years of experience. Proficient in PERN, Java and Python.",
+        about: "My bio is available on this page.",
+        contact: "My contact details are available on this page.",
+        projects: "All projects are available in this page.",
+    },
     name: "Dennis Drueck",
     jobDescription: "Full-Stack Developer",
     email: "Denwa.dev@gmail.com",
@@ -10,9 +17,9 @@ export const info = {
         email: "Denwa.dev@gmail.com",
         linkedin: "https://www.linkedin.com/in/dennis-d-58764754/",
     },
-    about: `With 4 years of software development experience and 16 years of IT experience, I am a talented and seasoned professional. Through my successful projects and certifications, I have demonstrated mastery of computer science fundamentals and full-stack application development. My strong focus on teamwork and collaboration helps me ensure that goals are well defined and deadlines are met. Given my diverse background spanning multinational corporations, startups, and freelancing, I can readily excel in any environment.`,
-    aboutFull: [
-        "I am a well rounded Full-Stack Developer with 4 years of experience, and 16 years of IT experience overall. I have worked with a variety of companies, including Tesla and E&J Gallo Winery, as well as startups. Growing up in the Chicago area, my family's restoration parts business gave me valuable insight into the intersection of technology and business.",
+    summary: `With 4 years of software development experience and 16 years of IT experience, I am a talented and seasoned professional. Through my successful projects and certifications, I have demonstrated mastery of computer science fundamentals and full-stack application development. My strong focus on teamwork and collaboration helps me ensure that goals are well defined and deadlines are met. Given my diverse background spanning multinational corporations, startups, and freelancing, I can readily excel in any environment.`,
+    about: [
+        "I am a Full-Stack Developer with 4 years of experience, and 16 years of IT experience overall. I have worked with a variety of companies, including Tesla and E&J Gallo Winery, as well as startups. Growing up in the Chicago area, my family's restoration parts business gave me valuable insight into the intersection of technology and business.",
         "In 2019, I joined a software as a service company, where I created website widgets using JavaScript, HTML, CSS, and Bootstrap, and automated processes with Python. More recently, I have been freelancing as an Agile full-stack developer, primarily using the PERN stack. I thrive in fast-paced environments and enjoy the challenge of rapidly delivering high-quality software while keeping overhead low.",
         "In addition to my technical skills, I am also a well-rounded individual. I enjoy playing guitar and drums, and volunteer as an ESL teacher through an international language exchange platform. When not working, I spend time with my family and pets.",
     ],

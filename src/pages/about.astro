@@ -4,6 +4,7 @@ import { info } from "@data";
 import MetaHead from "@components/general/MetaHead.astro";
 import Layout from "@layouts/Layout.astro";
 
+const { about }: { about: string[] } = info;
 const pClasses = "dark:text-light text-lg mb-8";
 ---
 
@@ -12,7 +13,7 @@ const pClasses = "dark:text-light text-lg mb-8";
     <head>
         <MetaHead
             title={"About"}
-            description={"My bio is available on this page."}
+            description={info.metaDescriptions.about}
             ogImageUrl={info.ogImageUrl}
         />
     </head>
@@ -22,11 +23,7 @@ const pClasses = "dark:text-light text-lg mb-8";
             <section>
                 <h1 style="line-height: 1.2;">About</h1>
                 <div class="my-16 w-full">
-                    {
-                        info.aboutFull.map((item) => (
-                            <p class={`${pClasses}`}>{item}</p>
-                        ))
-                    }
+                    {about.map((item) => <p class={`${pClasses}`}>{item}</p>)}
                 </div>
             </section>
         </Layout>
