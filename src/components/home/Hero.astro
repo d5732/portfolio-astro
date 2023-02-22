@@ -2,41 +2,29 @@
 import { IHeroProps } from "@types";
 
 const { name, summary } = Astro.props as IHeroProps;
-// const res = await fetch("https://api.github.com/users/d5732");
-// const data = await res.json();
-// // const data = {
-// //     avatar_url: "https://avatars.githubusercontent.com/u/113398750?v=4",
-// //     bio: "Full-Stack Developer",
-// // };
-// const { bio, avatar_url } = await data;
+const avatar_url = "https://avatars.githubusercontent.com/u/113398750?v=4";
 ---
 
-<script is:inline>
-    fetch("https://api.github.com/users/d5732")
-        .then((res) => res.json())
-        .then((data) => {
-            console.log("fetched data:", data);
-            document.getElementById("bio").innerText = data.bio;
-            document
-                .getElementById("avatar")
-                .setAttribute("src", data.avatar_url);
-        });
-</script>
 <section>
-    <div class="flex flex-wrap justify-between mt-[0px] sm:mt-[141px]">
-        <div class="dark:text-light">
-            <h1 class="mb-0 flex flex-wrap">
-                {name}
-            </h1>
-            <h2 id="bio" class="dark:text-light mb-0">bio</h2>
+    <div class="mt-[0px] flex flex-wrap justify-between sm:mt-[141px]">
+        <div class="w-full dark:text-light">
+            <p class="mt-4 dark:text-light">Hello! I am</p>
+            <div class="mt-8 flex items-center justify-between">
+                <div class="flex flex-col">
+                    <h1 class="my-0 flex flex-wrap">
+                        {name}
+                    </h1>
+                </div>
+                <img
+                    class="h-24 w-24 rounded-full xl:h-28 xl:w-28"
+                    id="avatar"
+                    alt=""
+                    src={avatar_url}
+                />
+            </div>
         </div>
-        <img
-            class="mt-8 ml-8 mr-auto w-24 h-24 rounded-full"
-            id="avatar"
-            alt=""
-        />
     </div>
-    <p class="dark:text-light text-lg mt-10 mb-16">
+    <p class="mt-10 mb-16 text-lg dark:text-light">
         {summary}
     </p>
 </section>
