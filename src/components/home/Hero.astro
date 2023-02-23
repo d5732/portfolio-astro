@@ -8,19 +8,28 @@ const avatar_url = "https://avatars.githubusercontent.com/u/113398750?v=4";
 <section>
     <div class="mt-[0px] flex flex-wrap justify-between sm:mt-[141px]">
         <div class="w-full dark:text-light">
-            <p class="mt-4 dark:text-light">Hello! I am</p>
             <div class="mt-8 flex items-center justify-between">
                 <div class="flex flex-col">
-                    <h1 class="my-0 flex flex-wrap">
-                        {name}
-                    </h1>
+                    <div>
+                        <div
+                            class="mt-4 mb-4 text-lg leading-none dark:text-light"
+                        >
+                            Hello! I am
+                        </div>
+                        <h1 class="mt-0 mb-4 flex flex-wrap">
+                            {name}
+                        </h1>
+                    </div>
                 </div>
-                <img
-                    class="h-24 w-24 rounded-full xl:h-28 xl:w-28"
-                    id="avatar"
-                    alt=""
-                    src={avatar_url}
-                />
+                <picture>
+                    <source srcset={avatar_url} media="(min-width: 1024px)" />
+                    <img
+                        id="avatar"
+                        class="hidden lg:block h-24 w-24 rounded-lg xl:h-28 xl:w-28"
+                        src=""
+                        alt=""
+                    />
+                </picture>
             </div>
         </div>
     </div>
