@@ -126,7 +126,7 @@ export const info = {
     ],
     projects: [
         {
-            title: "MAT Action",
+            title: "Martial Arts Technologies",
             isFeatured: true,
             thumbnail:
                 "/assets/images/project-thumbnails/mataction-site-sm.jpg",
