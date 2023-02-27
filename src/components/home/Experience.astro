@@ -12,19 +12,21 @@ const { title, details } = Astro.props as IExperiences;
         {
             details.map((item) => (
                 <div class="my-16">
-                    <div class="flex flex-wrap items-center justify-between">
-                        <h3 class="text-xl font-semibold">{item.title}</h3>
-                        <p class="dark:text-gray text-sm">
+                    <div class="flex flex-wrap items-start justify-between">
+                        <div>
+                            <h3 class="text-xl font-semibold">{item.title}</h3>
+                            <h3 class="text-xl font-semibold">{item.name}</h3>
+                        </div>
+                        <p class="dark:text-gray mt-[0.3125rem] text-sm">
                             {item.startDate} – {item.endDate}
                         </p>
                     </div>
-                    <h3 class="text-xl font-semibold">{item.name}</h3>
                     <p class="text-darkblue dark:text-blue mt-3 text-sm">
                         {item.location}
                     </p>
-                    <ul class="mt-3">
+                    <ul class="mt-3 ml-6 xl:ml-0">
                         {item.description.map((item) => (
-                            <li class="dark:text-gray mb-2 sm:list-disc">
+                            <li class="dark:text-gray mb-2 list-disc">
                                 <div>{item}</div>
                             </li>
                         ))}
