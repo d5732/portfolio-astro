@@ -319,7 +319,7 @@ export const info = {
         },
         {
             title: "EthereumHomies.com",
-            isFeatured: true,
+            isFeatured: false,
             thumbnail:
                 "/assets/images/project-thumbnails/ethereumhomies-site-sm.jpg",
             image: "/assets/images/project-thumbnails/ethereumhomies-site.jpg",
