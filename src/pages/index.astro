@@ -7,15 +7,17 @@ import Experience from "@components/home/Experience.astro";
 import ProjectsWrapper from "@components/home/ProjectsWrapper.astro";
 import MetaHead from "@components/general/MetaHead.astro";
 
-const featuredProjects = info.projects.reduce(
-    (featuredProjects, project, index) => {
-        if (project.isFeatured) {
-            featuredProjects.push(project);
+const featuredProjects = [];
+const featuredLimit = 6;
+let featuredCount = 0;
+filterFeatured: for (const project of info.projects) {
+    if (project.isFeatured) {
+        featuredProjects.push(project);
+        if (++featuredCount === featuredLimit) {
+            break filterFeatured;
         }
-        return featuredProjects;
-    },
-    []
-);
+    }
+}
 ---
 
 <!DOCTYPE html>
