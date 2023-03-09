@@ -4,7 +4,7 @@ export const info = {
     resumeUrl: "assets/resume/Dennis Drueck Resume 2023.2.20.pdf",
     pages: ["about", "contact", "projects"],
     metaDescriptions: {
-        home: "I'm Dennis Drueck, a full-stack developer with 4 years of experienced with PERN, Java and Python.",
+        home: "I'm Dennis Drueck, a full-stack developer based in Naperville, Illinois.",
         about: "My bio is available on this page.",
         contact: "My contact details are available on this page.",
         projects: "My projects are available in this page.",
