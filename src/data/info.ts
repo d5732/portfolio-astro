@@ -1,7 +1,7 @@
 export const info = {
     baseUrl: "https://denwa-dev.vercel.app/",
     ogImageUrl: "/android-chrome-512x512.png",
-    resumeUrl: "assets/resume/Dennis Drueck Resume 2023.2.20.pdf",
+    resumeUrl: "assets/resume/Dennis Drueck Resume.pdf",
     pages: ["about", "contact", "projects"],
     metaDescriptions: {
         home: "I'm Dennis Drueck, a full-stack developer based in Naperville, Illinois.",
@@ -28,6 +28,20 @@ export const info = {
     ],
     experience: [
         {
+            title: "Software Engineer",
+            name: "Tempus Labs, Inc.",
+            location: "Chicago, IL",
+            startDate: "4/2023",
+            endDate: "Present",
+            description: [
+                "Resolve critical errors in a complex, time-sensitive environment, diagnosing root causes using Splunk, GCP Console, DataGrip, DevTools and VS Code debugger, streamlining workflows for downstream laboratory teams. ",
+                "Implement resilient, scalable solutions using TypeScript, Node.js, NestJS, and React.js, prioritizing incremental improvements with measurable outcomes.",
+                "Eliminate costly delays by stabilizing critical microservice interactions, creating API request retry/delay strategies and roadmap to scale with future growth. ",
+                "Ensure compliance with HIPAA and AppSec best practices to protect patient and organization data privacy.",
+                "Collaborate efficiently in an agile team to support developers and product shareholders, using GitHub to create and review pull requests and Concourse CI to deploy releases.",
+            ],
+        },
+        {
             title: "Full-Stack Developer",
             name: "Self-Employed",
             location: "Naperville, IL",
@@ -46,7 +60,7 @@ export const info = {
             name: "Martial Arts Technologies",
             location: "Chicago, IL",
             startDate: "12/2022",
-            endDate: "Present",
+            endDate: "4/2023",
             description: [
                 "Contribute to SaaS products for event management in collaboration with the CTO and the product manager to improve functionality and implement time-saving automation. ",
                 "Reduce support requests for cross-platform issues by implementing responsiveness and input validation for 50+ web pages using PHP, Blade, jQuery, and Bootstrap.",
