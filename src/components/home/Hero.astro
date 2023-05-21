@@ -33,7 +33,5 @@ const avatar_url = "https://avatars.githubusercontent.com/u/113398750?v=4";
             </div>
         </div>
     </div>
-    <p class="text-lg dark:text-light">
-        {summary}
-    </p>
+    {summary.map((p) => <p class="text-lg dark:text-light mb-2">{p}</p>)}
 </section>

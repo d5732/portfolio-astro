@@ -6,7 +6,7 @@ export interface IMetaHead {
 
 export interface IHeroProps {
     name: string;
-    summary: string;
+    summary: string[];
 }
 
 export interface IContactProps {

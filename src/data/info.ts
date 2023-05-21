@@ -17,8 +17,11 @@ export const info = {
         email: "Denwa.dev@gmail.com",
         linkedin: "https://www.linkedin.com/in/dennis-d-58764754/",
     },
-    summary:
-        "I'm a full-stack developer based in Naperville, Illinois. With 4 years of software development experience and 16 years in IT, I can readily excel in any environment. My diverse background spans multinational corporations like Tesla and E. & J. Gallo, as well as start-ups and freelancing. I've resolved numerous complex problems, prioritizing scalability and client experience. Most recently, I created future-proof solutions for process automation at Martial Arts Technologies, using Node.js and Express.js, circumventing hundreds of hours of labor. I'm dedicated to continuous growth and am constantly looking for fresh obstacles to overcome.",
+    summary: [
+        "I'm a software engineer based in Naperville, Illinois. With 5 years of software development experience and 17 years in IT, I can readily excel in any environment. My diverse background spans multinational corporations like Tesla and E. & J. Gallo, as well as start-ups and freelancing.",
+        "I've resolved numerous complex problems, prioritizing scalability and client experience. Most recently, I created solutions to guarantee stability for critical microservice interactions using Node.js and NestJS, circumventing hundreds of hours of maintenance.",
+        "I'm dedicated to continuous growth and am constantly looking for fresh obstacles to overcome.",
+    ],
     about: [
         "I've developed software professionally for the past 4 years, and have more than 16 years of IT experience overall. I've been privileged to work with some awesome companies like Tesla, E. & J. Gallo Winery, as well as some really cool startups.",
         "Growing up in the Chicago area, my family owned and operated one of the largest suppliers of Camaro parts in the United States, which gave me early insight into the intersection of business and technology.",
@@ -62,10 +65,10 @@ export const info = {
             startDate: "12/2022",
             endDate: "4/2023",
             description: [
-                "Contribute to SaaS products for event management in collaboration with the CTO and the product manager to improve functionality and implement time-saving automation. ",
-                "Reduce support requests for cross-platform issues by implementing responsiveness and input validation for 50+ web pages using PHP, Blade, jQuery, and Bootstrap.",
-                "Increase SERP ranking and page speed via network and asset optimization strategies.",
-                "Automate time consuming tasks related to logo color extraction by scraping CDNs and analyzing images with JavaScript, Node.js, color-thief and tinycolor2.",
+                "Contributed to SaaS products for event management in collaboration with the CTO and the product manager to improve functionality and implement time-saving automation. ",
+                "Reduced support requests for cross-platform issues by implementing responsiveness and input validation for 50+ web pages using PHP, Blade, jQuery, and Bootstrap.",
+                "Increased SERP ranking and page speed via network and asset optimization strategies.",
+                "Automated time consuming tasks related to logo color extraction by scraping CDNs and analyzing images with JavaScript, Node.js, color-thief and tinycolor2.",
             ],
         },
         {
