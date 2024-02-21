@@ -1,3 +1,13 @@
+function getYearsSinceDate(date: Date): number {
+  const msPerYear = 365.25 * 24 * 60 * 60 * 1000;
+  return Math.round((new Date().getTime() - date.getTime()) / msPerYear);
+}
+
+const yearsOfSoftwareDevelopmentExperience = getYearsSinceDate(
+  new Date("2019")
+);
+const yearsOfItExperience = getYearsSinceDate(new Date("2006"));
+
 export const info = {
     baseUrl: "https://denwa-dev.vercel.app/",
     ogImageUrl: "/android-chrome-512x512.png",
@@ -18,12 +28,12 @@ export const info = {
         linkedin: "https://www.linkedin.com/in/dennis-d-58764754/",
     },
     summary: [
-        "I'm a software engineer based in Naperville, Illinois. With 5 years of software development experience and 17 years in IT, I can readily excel in any environment. My diverse background spans multinational corporations like Tesla and E. & J. Gallo, as well as start-ups and freelancing.",
+    `I'm a software engineer based in Naperville, Illinois. With ${yearsOfSoftwareDevelopmentExperience} years of software development experience and ${yearsOfItExperience} years in IT, I can readily excel in any environment. My diverse background spans multinational corporations like Tesla and E. & J. Gallo, as well as start-ups and freelancing.`,
         "I've resolved numerous complex problems, prioritizing scalability and client experience. Most recently, I created solutions to guarantee stability for critical microservice interactions using Node.js and NestJS, circumventing hundreds of hours of maintenance.",
         "I'm dedicated to continuous growth and am constantly looking for fresh obstacles to overcome.",
     ],
     about: [
-        "I've developed software professionally for the past 4 years, and have more than 16 years of IT experience overall. I've been privileged to work with some awesome companies like Tesla, E. & J. Gallo Winery, as well as some really cool startups.",
+    `I've developed software professionally for the past ${yearsOfSoftwareDevelopmentExperience} years, and have more than ${yearsOfItExperience} years of IT experience overall. I've been privileged to work with some awesome companies like Tesla, E. & J. Gallo Winery, as well as some really cool startups.`,
         "Growing up in the Chicago area, my family owned and operated one of the largest suppliers of Camaro parts in the United States, which gave me early insight into the intersection of business and technology.",
         "In 2019, I landed a position developing website widgets for a software as a service company. There, I used JavaScript, HTML, CSS, and Bootstrap to create reusable components. I also automated processes related to data entry and report compilation using Python.",
         "Since 2021, I have been freelancing as an Agile full-stack developer, mostly using the PERN stack. I fell in love with the challenges of discovering requirements and delivering software rapidly keeping overhead low and negotiating the unexpected. Throughout that time, I have completed various certifications and educational programs to learn additional frameworks, and design patterns,",
