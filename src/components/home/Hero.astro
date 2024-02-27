@@ -6,32 +6,30 @@ const avatar_url = "https://avatars.githubusercontent.com/u/113398750?v=4";
 ---
 
 <section class="mb-32">
-    <div class="mt-[0px] mb-10 flex flex-wrap justify-between sm:mt-[141px]">
-        <div class="w-full dark:text-light">
-            <div class="mt-8 flex items-center justify-between">
-                <div class="flex flex-col">
-                    <div>
-                        <div
-                            class="mt-4 mb-4 text-lg leading-none dark:text-light"
-                        >
-                            Hello, I am
-                        </div>
-                        <h1 class="mt-0 mb-4 flex flex-wrap">
-                            {name}
-                        </h1>
-                    </div>
-                </div>
-                <picture>
-                    <source srcset={avatar_url} media="(min-width: 1024px)" />
-                    <img
-                        id="avatar"
-                        class="hidden h-80 w-80 rounded-lg lg:block"
-                        src=""
-                        alt=""
-                    />
-                </picture>
+  <div class="mt-[0px] mb-10 flex flex-wrap justify-between sm:mt-[141px]">
+    <div class="w-full dark:text-light">
+      <div class="mt-8 flex items-center justify-between">
+        <div class="flex flex-col">
+          <div>
+            <div class="mt-4 mb-4 text-lg leading-none dark:text-light">
+              Hello, I am
             </div>
+            <h1 class="mt-0 mb-4 flex flex-wrap">
+              {name}
+            </h1>
+          </div>
         </div>
+        <picture>
+          <source srcset={avatar_url} media="(min-width: 1024px)" />
+          <img
+            id="avatar"
+            class="hidden h-52 w-52 rounded-lg lg:block"
+            src=""
+            alt=""
+          />
+        </picture>
+      </div>
     </div>
-    {summary.map((p) => <p class="text-lg dark:text-light mb-2">{p}</p>)}
+  </div>
+  {summary.map((p) => <p class="mb-2 text-lg dark:text-light">{p}</p>)}
 </section>
