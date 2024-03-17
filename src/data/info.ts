@@ -43,16 +43,19 @@ export const info = {
   experience: [
     {
       title: "Software Engineer",
-      name: "Tempus Labs, Inc.",
+      name: "Tempus Labs via Egen",
       location: "Chicago, IL",
       startDate: "4/2023",
       endDate: "Present",
       description: [
-        "Resolve critical errors in a complex, time-sensitive environment, diagnosing root causes using Splunk, GCP Console, DataGrip, DevTools and VS Code debugger, streamlining workflows for downstream laboratory teams. ",
-        "Implement resilient, scalable solutions using TypeScript, Node.js, NestJS, and React.js, prioritizing incremental improvements with measurable outcomes.",
-        "Eliminate costly delays by stabilizing critical microservice interactions, creating API request retry/delay strategies and roadmap to scale with future growth. ",
-        "Ensure compliance with HIPAA and AppSec best practices to protect patient and organization data privacy.",
-        "Collaborate efficiently in an agile team to support developers and product shareholders, using GitHub to create and review pull requests and Concourse CI to deploy releases.",
+        "Increased release velocity and impact by recognizing the most valuable features and compelling stakeholders to minimize scope creep.",
+        "Streamlined event processing between circular systems, eliminating costly delays and increasing data integrity and system stability in complex microservice architecture.",
+        "Accelerated team skills growth and delivery speed through effective mentorship and constructive, tactful feedback.",
+        "Resolved large amorphous problems by breaking them into manageable components, including safe delivery and release management.",
+        "Resolved resource contention for complex inter-service graphs with semaphore and mutex patterns.",
+        "Conducted Root Cause Analysis (RCA) using various tools including VS Code debugger, Splunk, GCP Console, DataGrip, and Chrome DevTools.",
+        "Provided expertise in design patterns for CI/CD and containerization using multi-step builds in Concourse CI.",
+        "Ensured compliance with application development and cloud security best practices, safeguarding patient and organization data privacy and PHI compliance.",
       ],
     },
     {
