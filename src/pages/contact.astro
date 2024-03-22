@@ -10,56 +10,52 @@ const { email } = info as IContactProps;
 
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <MetaHead
-            title={"Contact"}
-            description={info.metaDescriptions.contact}
-            ogImageUrl={info.ogImageUrl}
-        />
-    </head>
+  <head>
+    <MetaHead
+      title={"Contact"}
+      description={info.metaDescriptions.contact}
+      ogImageUrl={info.ogImageUrl}
+    />
+  </head>
 
-    <body>
-        <Layout>
-            <section>
-                <h1 style="line-height: 1.2;">Contact</h1>
-                <div class="my-16 w-full">
-                    <p class="text-lg dark:text-light">
-                        Interested in working together?
-                    </p>
-                    <div class="my-8 flex items-center gap-8">
-                        <a
-                            target="_blank"
-                            href={info.resumeUrl}
-                            aria-label="Send me a message me"
-                            class="rounded-lg bg-slate-200 p-4 dark:bg-[#202020] dark:text-light"
-                        >
-                            <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                width="20"
-                                height="20"
-                                viewBox="0 0 24 24"
-                                fill="none"
-                                stroke="currentColor"
-                                stroke-width="2"
-                                stroke-linecap="round"
-                                stroke-linejoin="round"
-                                class="feather feather-send mb-1 inline-block"
-                                ><line x1="22" y1="2" x2="11" y2="13"
-                                ></line><polygon
-                                    points="22 2 15 22 11 13 2 9 22 2"
-                                ></polygon></svg
-                            >
-                            <span class="ml-1 text-lg">Send Me a Message</span>
-                        </a>
-                    </div>
-                    <p class="text-lg dark:text-light">
-                        Contact me to schedule a free consultation.
-                    </p>
-                    <p class="mb-8 text-lg dark:text-light">
-                        I look forward to meeting with you!
-                    </p>
-                </div>
-            </section>
-        </Layout>
-    </body>
+  <body>
+    <Layout>
+      <section>
+        <h1 style="line-height: 1.2;">Contact</h1>
+        <div class="my-16 w-full">
+          <p class="text-lg dark:text-light">Interested in working together?</p>
+          <div class="my-8 flex items-center gap-8">
+            <a
+              target="_blank"
+              href={`mailto:${info.email}`}
+              aria-label="Send me a message me"
+              class="rounded-lg bg-slate-200 p-4 dark:bg-[#202020] dark:text-light"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="feather feather-send mb-1 inline-block"
+                ><line x1="22" y1="2" x2="11" y2="13"></line><polygon
+                  points="22 2 15 22 11 13 2 9 22 2"></polygon></svg
+              >
+              <span class="ml-1 text-lg">Denwa.dev@gmail.com</span>
+            </a>
+          </div>
+          <p class="text-lg dark:text-light">
+            Contact me to schedule a free consultation.
+          </p>
+          <p class="mb-8 text-lg dark:text-light">
+            I look forward to meeting with you!
+          </p>
+        </div>
+      </section>
+    </Layout>
+  </body>
 </html>
