@@ -42,7 +42,7 @@ export const info = {
   ],
   experience: [
     {
-      title: "Software Engineer",
+      title: "Senior Software Engineer",
       name: "Tempus Labs via Egen",
       location: "Chicago, IL",
       startDate: "4/2023",
