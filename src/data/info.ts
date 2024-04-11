@@ -62,7 +62,7 @@ export const info = {
       name: "Self-Employed",
       location: "Naperville, IL",
       startDate: "10/2021",
-      endDate: "Present",
+      endDate: "4/2023",
       description: [
         "Provide end-to-end solutions, including full-stack development, UI and UX design, SEO, market research, and digital media, using an Agile approach to build web applications. ",
         "Release products on time by identifying highest value features after evaluating problem statements and distilling requirements in collaboration with product teams. ",
