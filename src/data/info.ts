@@ -93,7 +93,7 @@ export const info = {
       description: [
         "Created and maintained a single-page application to facilitate blockchain transactions in collaboration with the product manager and 1 additional developer.",
         "Delivered MVP in 1 week, and 2 major updates within 1 week of requirements approval.",
-        "Imported real-time data and performed asynchronous transactions via Ethereum’s JSON RPC API using web3.js, providing error-proofing and ease-of-access.",
+        "Imported real-time data and performed asynchronous transactions via Ethereum's JSON RPC API using web3.js, providing error-proofing and ease-of-access.",
         "Optimized cross-platform user-experiences with responsive and adaptive design, lazy-loading, and asset optimization.",
       ],
     },
