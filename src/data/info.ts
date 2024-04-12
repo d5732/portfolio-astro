@@ -78,7 +78,7 @@ export const info = {
       startDate: "12/2022",
       endDate: "4/2023",
       description: [
-        "Contributed to SaaS products for event management in collaboration with the CTO and the product manager to improve functionality and implement time-saving automation. ",
+        "Lead design and implementation of solutions for workflow automation, geolocation, and image processing, in collaboration with the CTO and the product manager.",
         "Reduced support requests for cross-platform issues by implementing responsiveness and input validation for 50+ web pages using PHP, Blade, jQuery, and Bootstrap.",
         "Increased SERP ranking and page speed via network and asset optimization strategies.",
         "Automated time consuming tasks related to logo color extraction by scraping CDNs and analyzing images with JavaScript, Node.js, color-thief and tinycolor2.",
