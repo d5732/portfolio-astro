@@ -43,18 +43,18 @@ export const info = {
   experience: [
     {
       title: "Senior Software Engineer",
-      name: "Tempus Labs via Egen",
+      name: "Tempus AI (via Egen)",
       location: "Chicago, IL",
       startDate: "4/2023",
       endDate: "Present",
       description: [
-        "Enhanced release velocity and impact by identifying the most valuable features and persuading stakeholders to minimize scope creep.",
-        "Optimized event processing between interconnected systems, eliminating costly delays and enhancing data integrity and system stability within a complex microservice architecture.",
-        "Fostered team skill development through effective mentorship and tactful, constructive feedback, aligned with organizational core values and engineering best practices.",
-        "Led large-scale deliveries by spearheading the scoping phase, conducting requirements discovery, and garnering stakeholder support for complex, dynamic problems.",
-        "Conducted Root Cause Analysis (RCA) using various tools, including VS Code debugger, Splunk, GCP Console, DataGrip, and Chrome DevTools.",
-        "Provided expertise in design patterns for CI/CD and containerization, employing multi-step builds in Concourse CI.",
-        "Ensured compliance with application development and cloud security best practices, safeguarding patient and organization data privacy and PHI compliance.",
+        "Enhance release velocity and impact by identifying the most valuable features and persuading stakeholders to minimize scope creep.",
+        "Optimize event processing between interconnected systems, eliminating costly delays and enhancing data integrity and system stability within a complex microservice architecture.",
+        "Foster team skill development through effective mentorship and tactful, constructive feedback, aligned with organizational core values and engineering best practices.",
+        "Lead large-scale deliveries by spearheading the scoping phase, conducting requirements discovery, and garnering stakeholder support for complex, dynamic problems.",
+        "Conduct Root Cause Analysis (RCA) using various tools, including VS Code debugger, Splunk, GCP Console, DataGrip, and Chrome DevTools.",
+        "Provide expertise in design patterns for CI/CD and containerization, employing multi-step builds in Concourse CI to improve replication for horizontally-scaled systems, and reduce time to deploy new builds by a factor of 10.",
+        "Ensure compliance with application development and cloud security best practices, safeguarding patient and organization data privacy and PHI compliance. ",
       ],
     },
     {
