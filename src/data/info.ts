@@ -64,11 +64,12 @@ export const info = {
       startDate: "10/2021",
       endDate: "4/2023",
       description: [
-        "Provide end-to-end solutions, including full-stack development, UI and UX design, SEO, market research, and digital media, using an Agile approach to build web applications. ",
-        "Release products on time by identifying highest value features after evaluating problem statements and distilling requirements in collaboration with product teams. ",
-        "Increase traffic and revenue for clients, achieving top SERP rankings and enhancing user experience through excellent page speed, accessibility, and responsiveness.",
-        "Deliver features rapidly, iterating with Agile sprints.",
-        "Improve stability with nearly instantaneous version updates by implementing CI/CD pipelines using Git and GitHub to easily deploy new production builds in seconds.",
+        "Delivered end-to-end solutions, encompassing full-stack development, UI/UX design, SEO, market research, and digital media, using Agile methodologies to develop web applications.",
+        "Met product release deadlines by prioritizing high-value features through problem statement evaluation and requirement distillation in collaboration with product teams.",
+        "Boosted client traffic and revenue by achieving top SERP rankings and enhancing user experience through optimized page speed, accessibility, and responsiveness.",
+        "Accelerated feature delivery through iterative Agile sprints.",
+        "Implemented one-touch deployment CI/CD pipelines using Git and GitHub, enabling rapid deployment of new production builds within seconds.",
+        "Enhanced system stability with nearly instantaneous version updates by implementing CI/CD pipelines using Git and GitHub, enabling rapid deployment of new production builds within seconds.",
       ],
     },
     {
