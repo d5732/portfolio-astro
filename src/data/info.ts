@@ -52,7 +52,7 @@ export const info = {
         "Enhance release velocity and impact by identifying the most valuable features and persuading stakeholders to minimize scope creep.",
         "Optimize event processing between interconnected systems, eliminating costly delays and enhancing data integrity and system stability within a complex microservice architecture.",
         "Foster team skill development through effective mentorship and tactful, constructive feedback, aligned with organizational core values and engineering best practices.",
-        "Lead large-scale deliveries by spearheading the scoping phase, conducting requirements discovery, and garnering stakeholder support for complex, dynamic problems.",
+        "Lead large-scale deliveries by spearheading the scoping phase, prioritizing requirements, and defining objectives, timelines, and milestones.",
         "Conduct Root Cause Analysis (RCA) using various tools, including VS Code debugger, Splunk, GCP Console, AWS Console, DataGrip, and Chrome DevTools.",
         "Provide expertise in design patterns for CI/CD and containerization, employing multi-step builds in Concourse CI to improve replication for horizontally-scaled systems, and reduce time to deploy new builds by a factor of 10.",
         "Ensure compliance with application development and cloud security best practices, safeguarding patient and organization data privacy and PHI compliance. ",
