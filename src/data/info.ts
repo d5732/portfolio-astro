@@ -64,11 +64,11 @@ export const info = {
       startDate: "10/2021",
       endDate: "4/2023",
       description: [
-        "Delivered end-to-end solutions, encompassing full-stack development, UI/UX design, SEO, market research, and digital media, using Agile methodologies to develop web applications.",
-        "Met product release deadlines by prioritizing high-value features through problem statement evaluation and requirement distillation in collaboration with product teams.",
+        "Delivered end-to-end solutions for web apps, encompassing full-stack development, UI/UX design, SEO, and digital media, following Agile methodologies.",
+        "Met product release deadlines by prioritizing key features through problem analysis and collaboration with product teams.",
         "Boosted client traffic and revenue by achieving top SERP rankings and enhancing user experience through optimized page speed, accessibility, and responsiveness.",
         "Accelerated feature delivery through iterative Agile sprints.",
-        "Implemented zero-touch deployment CI/CD pipelines using Git and GitHub, enabling automated deployment seconds after merging repository changes.",
+        "Built automated CI/CD pipelines in GitHub for zero-touch deployment of latest changes.",
       ],
     },
     {
@@ -94,7 +94,7 @@ export const info = {
         "Created and maintained a single-page application to facilitate blockchain transactions in collaboration with the product manager and 1 additional developer.",
         "Delivered MVP in 1 week, and 2 major updates within 1 week of requirements approval.",
         "Imported real-time data and performed asynchronous transactions via Ethereum's JSON RPC API using web3.js, providing error-proofing and ease-of-access.",
-        "Optimized cross-platform user-experiences with responsive and adaptive design, lazy-loading, and asset optimization.",
+        "Optimized cross-platform user experiences with responsive and adaptive design, lazy-loading, and asset optimization.",
       ],
     },
     {
@@ -325,7 +325,7 @@ export const info = {
         "Authenticated transactions efficiently with merkletreejs to save users money on fees.",
         "Built CI/CD pipeline via GitHub integration on Cloudflare Pages Jamstack.",
         "Imported real-time data and performed asynchronous transactions via Ethereum's JSON RPC API using web3.js, providing error-proofing and ease-of-access.",
-        "Optimized cross-platform user-experiences with responsive and adaptive design, lazy-loading, and asset optimization.",
+        "Optimized cross-platform user experiences with responsive and adaptive design, lazy-loading, and asset optimization.",
       ],
       environment: [
         "JavaScript",
