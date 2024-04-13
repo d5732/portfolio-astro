@@ -29,8 +29,8 @@ export const info = {
   },
   summary: [
     `I'm a software engineer based in Naperville, Illinois. With ${yearsOfSoftwareDevelopmentExperience} years of software development experience and ${yearsOfItExperience} years in IT, I can readily excel in any environment. My diverse background spans multinational corporations like Tesla and E. & J. Gallo, as well as start-ups and freelancing.`,
-    "I've resolved numerous complex problems, prioritizing scalability and client experience. Most recently, I created solutions to guarantee stability for critical microservice interactions using Node.js and NestJS, circumventing hundreds of hours of maintenance.",
-    "I'm dedicated to continuous growth and am constantly looking for fresh obstacles to overcome.",
+    "I've created pragmatic solutions to numerous complex problems, prioritizing scalability and engineering efficiency. Currently, I'm improving data integrity in Tempus AI's DNA sequencing pipeline, streamlining complex data processing.",
+    "My commitment to continuous learning and growth empowers me to tackle increasingly challenging issues and deliver high-impact solutions.",
   ],
   about: [
     `I've developed software professionally for the past ${yearsOfSoftwareDevelopmentExperience} years, and have more than ${yearsOfItExperience} years of IT experience overall. I've been privileged to work with some awesome companies like Tesla, E. & J. Gallo Winery, as well as some really cool startups.`,
