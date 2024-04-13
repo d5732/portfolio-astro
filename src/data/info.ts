@@ -68,8 +68,7 @@ export const info = {
         "Met product release deadlines by prioritizing high-value features through problem statement evaluation and requirement distillation in collaboration with product teams.",
         "Boosted client traffic and revenue by achieving top SERP rankings and enhancing user experience through optimized page speed, accessibility, and responsiveness.",
         "Accelerated feature delivery through iterative Agile sprints.",
-        "Implemented one-touch deployment CI/CD pipelines using Git and GitHub, enabling rapid deployment of new production builds within seconds.",
-        "Enhanced system stability with nearly instantaneous version updates by implementing CI/CD pipelines using Git and GitHub, enabling rapid deployment of new production builds within seconds.",
+        "Implemented zero-touch deployment CI/CD pipelines using Git and GitHub, enabling automated deployment seconds after merging repository changes.",
       ],
     },
     {
