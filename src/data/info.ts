@@ -79,7 +79,7 @@ export const info = {
       startDate: "12/2022",
       endDate: "4/2023",
       description: [
-        "Led the design and implementation of solutions for workflow automation, geolocation, and image processing in collaboration with the CTO and product manager.",
+        "Led design and implementation of solutions for workflow automation, geolocation, and image processing in collaboration with the CTO and product manager.",
         "Reduced cross-platform support requests by implementing responsiveness and input validation across 50+ web pages using PHP, Blade, jQuery, and Bootstrap.",
         "Improved SERP ranking and page speed through network and asset optimization strategies.",
         "Automated time-consuming tasks related to logo color extraction by scraping CDNs and analyzing images with JavaScript, Node.js, color-thief and tinycolor2.",
@@ -87,7 +87,7 @@ export const info = {
     },
     {
       title: "Full-Stack Developer",
-      name: "TrapMonkie.io",
+      name: "TrapMonkie",
       location: "West Palm Beach, FL",
       startDate: "11/2021",
       endDate: "08/2022",
@@ -163,7 +163,7 @@ export const info = {
       image: "/assets/images/project-thumbnails/mataction-site.jpg",
       liveUrl: "https://www.mataction.com/",
       description: [
-        "Led the design and implementation of solutions for workflow automation, geolocation, and image processing in collaboration with the CTO and product manager.",
+        "Led design and implementation of solutions for workflow automation, geolocation, and image processing in collaboration with the CTO and product manager.",
         "Reduced cross-platform support requests by implementing responsiveness and input validation across 50+ web pages using PHP, Blade, jQuery, and Bootstrap.",
         "Improved SERP ranking and page speed through network and asset optimization strategies.",
         "Automated time-consuming tasks related to logo color extraction by scraping CDNs and analyzing images with JavaScript, Node.js, color-thief and tinycolor2.",
