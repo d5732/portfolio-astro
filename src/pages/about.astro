@@ -3,17 +3,13 @@ import MetaHead from "@components/general/MetaHead.astro";
 import { info } from "@data";
 import Layout from "@layouts/Layout.astro";
 
-const { about } = info;
+const { metaDescriptions, about } = info;
 ---
 
 <!doctype html>
 <html lang="en">
   <head>
-    <MetaHead
-      title={"About"}
-      description={info.metaDescriptions.about}
-      ogImageUrl={info.openGraphImageUrl}
-    />
+    <MetaHead title={"About"} description={metaDescriptions.about} />
   </head>
 
   <body>

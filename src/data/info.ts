@@ -140,7 +140,7 @@ export const info: IInfo = {
   ],
   certifications: [
     {
-      title: "FreeCodeCamp.org",
+      name: "FreeCodeCamp.org",
       location: "San Francisco, CA",
       startDate: "06/2021",
       endDate: "12/2022",

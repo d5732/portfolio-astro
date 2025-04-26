@@ -1,9 +1,3 @@
-export interface IMetaHeadProps {
-  title: string;
-  description: string;
-  ogImageUrl: string;
-}
-
 export interface IHeroProps {
   name: string;
   summary: string[];

@@ -5,9 +5,10 @@ import Hero from "@components/home/Hero.astro";
 import ProjectsWrapper from "@components/home/ProjectsWrapper.astro";
 import { info } from "@data";
 import Layout from "@layouts/Layout.astro";
+import type { IProject } from "../types";
 
 const featuredLimit = 6;
-const featuredProjects = info.projects.reduce((acc, project) => {
+const featuredProjects = info.projects.reduce<IProject[]>((acc, project) => {
   if (project.isFeatured && acc.length < featuredLimit) {
     acc.push(project);
   }
@@ -18,12 +19,9 @@ const featuredProjects = info.projects.reduce((acc, project) => {
 <!doctype html>
 <html lang="en">
   <head>
-    <MetaHead
-      title={"Portfolio"}
-      description={info.metaDescriptions.home}
-      ogImageUrl={info.openGraphImageUrl}
-    />
+    <MetaHead title={"Portfolio"} description={info.metaDescriptions.home} />
   </head>
+
   <body>
     <Layout>
       <Hero name={info.name} summary={info.summary} />

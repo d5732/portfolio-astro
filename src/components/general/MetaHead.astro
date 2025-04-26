@@ -1,8 +1,12 @@
 ---
 import { info } from "@data";
-import type { IMetaHeadProps } from "@types";
+interface Props {
+  title: string;
+  description: string;
+}
 
-const { title, description, ogImageUrl } = Astro.props as IMetaHeadProps;
+const { title, description } = Astro.props;
+const { openGraphImageUrl } = info;
 ---
 
 <meta charset="UTF-8" />
@@ -41,8 +45,8 @@ const { title, description, ogImageUrl } = Astro.props as IMetaHeadProps;
 {title && <meta property="og:title" content={`${title} - ${info.name}`} />}
 {description && <meta property="og:description" content={description} />}
 {
-  ogImageUrl && (
-    <meta property="og:image" content={`${info.baseUrl}${ogImageUrl}`} />
+  openGraphImageUrl && (
+    <meta property="og:image" content={`${info.baseUrl}${openGraphImageUrl}`} />
   )
 }
 
@@ -59,8 +63,11 @@ const { title, description, ogImageUrl } = Astro.props as IMetaHeadProps;
 {title && <meta property="twitter:title" content={`${title} - ${info.name}`} />}
 {description && <meta property="twitter:description" content={description} />}
 {
-  ogImageUrl && (
-    <meta property="twitter:image" content={`${info.baseUrl}${ogImageUrl}`} />
+  openGraphImageUrl && (
+    <meta
+      property="twitter:image"
+      content={`${info.baseUrl}${openGraphImageUrl}`}
+    />
   )
 }
 
