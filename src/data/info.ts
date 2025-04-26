@@ -26,6 +26,7 @@ export const info = {
     github: "https://github.com/d5732",
     email: "Denwa.dev@gmail.com",
     linkedin: "https://www.linkedin.com/in/dennis-d-58764754/",
+    medium: "https://medium.com/@denwa.dev",
   },
   summary: [
     `I'm a software engineer based in Naperville, Illinois. With ${yearsOfSoftwareDevelopmentExperience} years of software development experience and ${yearsOfItExperience} years in IT, I can readily excel in any environment. My diverse background spans multinational corporations like Tesla and E. & J. Gallo, as well as start-ups and freelancing.`,
