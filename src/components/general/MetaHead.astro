@@ -1,6 +1,6 @@
 ---
-import { IMetaHead } from "@types";
 import { info } from "@data";
+import { IMetaHead } from "@types";
 
 const { title, description, ogImageUrl } = Astro.props as IMetaHead;
 ---
@@ -23,9 +23,9 @@ const { title, description, ogImageUrl } = Astro.props as IMetaHead;
 
 <!-- Primary Meta Tags -->
 {
-    title && (
-        <link rel="canonical" href={`${info.baseUrl}${Astro.url.pathname}`} />
-    )
+  title && (
+    <link rel="canonical" href={`${info.baseUrl}${Astro.url.pathname}`} />
+  )
 }
 {title && <title>{`${title} - ${info.name}`}</title>}
 {title && <meta name="title" content={`${title} - ${info.name}`} />}
@@ -34,52 +34,46 @@ const { title, description, ogImageUrl } = Astro.props as IMetaHead;
 <!-- Open Graph / Facebook -->
 {title && <meta property="og:type" content="website" />}
 {
-    title && (
-        <meta
-            property="og:url"
-            content={`${info.baseUrl}${Astro.url.pathname}`}
-        />
-    )
+  title && (
+    <meta property="og:url" content={`${info.baseUrl}${Astro.url.pathname}`} />
+  )
 }
 {title && <meta property="og:title" content={`${title} - ${info.name}`} />}
 {description && <meta property="og:description" content={description} />}
 {
-    ogImageUrl && (
-        <meta property="og:image" content={`${info.baseUrl}${ogImageUrl}`} />
-    )
+  ogImageUrl && (
+    <meta property="og:image" content={`${info.baseUrl}${ogImageUrl}`} />
+  )
 }
 
 <!-- Twitter -->
 {title && <meta property="twitter:card" content="summary_large_image" />}
 {
-    title && (
-        <meta
-            property="twitter:url"
-            content={`${info.baseUrl}${Astro.url.pathname}`}
-        />
-    )
+  title && (
+    <meta
+      property="twitter:url"
+      content={`${info.baseUrl}${Astro.url.pathname}`}
+    />
+  )
 }
 {title && <meta property="twitter:title" content={`${title} - ${info.name}`} />}
 {description && <meta property="twitter:description" content={description} />}
 {
-    ogImageUrl && (
-        <meta
-            property="twitter:image"
-            content={`${info.baseUrl}${ogImageUrl}`}
-        />
-    )
+  ogImageUrl && (
+    <meta property="twitter:image" content={`${info.baseUrl}${ogImageUrl}`} />
+  )
 }
 
 <!-- preload assests -->
 <link
-    rel="preload"
-    href="/assets/fonts/Inter/Inter-Light.ttf"
-    as="font"
-    crossorigin
+  rel="preload"
+  href="/assets/fonts/Inter/Inter-Light.ttf"
+  as="font"
+  crossorigin
 />
 <link
-    rel="preload"
-    href="/assets/fonts/Outfit/Outfit-SemiBold.ttf"
-    as="font"
-    crossorigin
+  rel="preload"
+  href="/assets/fonts/Outfit/Outfit-SemiBold.ttf"
+  as="font"
+  crossorigin
 />

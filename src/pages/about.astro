@@ -10,22 +10,22 @@ const pClasses = "dark:text-light text-lg mb-8";
 
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <MetaHead
-            title={"About"}
-            description={info.metaDescriptions.about}
-            ogImageUrl={info.ogImageUrl}
-        />
-    </head>
+  <head>
+    <MetaHead
+      title={"About"}
+      description={info.metaDescriptions.about}
+      ogImageUrl={info.ogImageUrl}
+    />
+  </head>
 
-    <body>
-        <Layout>
-            <section>
-                <h1 style="line-height: 1.2;">About</h1>
-                <div class="my-16 w-full">
-                    {about.map((item) => <p class={`${pClasses}`}>{item}</p>)}
-                </div>
-            </section>
-        </Layout>
-    </body>
+  <body>
+    <Layout>
+      <section>
+        <h1 style="line-height: 1.2;">About</h1>
+        <div class="my-16 w-full">
+          {about.map((item) => <p class={`${pClasses}`}>{item}</p>)}
+        </div>
+      </section>
+    </Layout>
+  </body>
 </html>

@@ -11,29 +11,26 @@ const { projects } = info as IProjects;
 
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <MetaHead
-            title={"Projects"}
-            description={info.metaDescriptions.projects}
-            ogImageUrl={info.ogImageUrl}
-        />
-    </head>
+  <head>
+    <MetaHead
+      title={"Projects"}
+      description={info.metaDescriptions.projects}
+      ogImageUrl={info.ogImageUrl}
+    />
+  </head>
 
-    <body>
-        <Layout>
-            <section>
-                <h1 style="line-height: 1.2;">Projects</h1>
-                <div class="grid grid-cols-1 gap-4">
-                    {
-                        projects.map((project, index) => (
-                            <ProjectArticle
-                                projectDetail={project}
-                                isLazy={index > 0}
-                            />
-                        ))
-                    }
-                </div>
-            </section>
-        </Layout>
-    </body>
+  <body>
+    <Layout>
+      <section>
+        <h1 style="line-height: 1.2;">Projects</h1>
+        <div class="grid grid-cols-1 gap-4">
+          {
+            projects.map((project, index) => (
+              <ProjectArticle projectDetail={project} isLazy={index > 0} />
+            ))
+          }
+        </div>
+      </section>
+    </Layout>
+  </body>
 </html>
