@@ -1,12 +1,18 @@
 ---
-import { IProjectDetails } from "@types";
-const { projectDetail } = Astro.props as IProjectDetails;
-const { title, thumbnail, liveUrl, githubUrl } = projectDetail;
+import type { info } from "../../data/info";
+
+interface Props {
+  project: (typeof info.projects)[number];
+}
+
+const {
+  project: { title, thumbnail, deploymentUrl: liveUrl, githubUrl },
+} = Astro.props;
 const projectInfoUrl: string = "/projects#" + title;
 ---
 
-<article class="w-full max-h-[25rem] overflow-hidden relative group">
-  <div class="flex items-center absolute right-4 top-4 z-10">
+<article class="group relative max-h-[25rem] w-full overflow-hidden">
+  <div class="absolute right-4 top-4 z-10 flex items-center">
     {
       githubUrl && (
         <a
@@ -62,7 +68,7 @@ const projectInfoUrl: string = "/projects#" + title;
 
     <a
       href={projectInfoUrl}
-      class="text-white p-3 bg-black/50 rounded-full backdrop-blur-md ml-1"
+      class="ml-1 rounded-full bg-black/50 p-3 text-white backdrop-blur-md"
       aria-label="Project Info"
     >
       <svg
@@ -86,14 +92,14 @@ const projectInfoUrl: string = "/projects#" + title;
   </div>
   <img
     src={thumbnail}
-    class="w-full h-auto scale-100 hover:scale-110 transition duration-[1.5s]"
+    class="h-auto w-full scale-100 transition duration-[1.5s] hover:scale-110"
     loading="lazy"
     width="100%"
     height="100%"
     alt="featureImage"
   />
   <div
-    class="absolute w-full bottom-0 left-0 backdrop-blur-md dark:text-white text-white bg-black/50 p-4 translate-y-[100%] group-hover:translate-y-0 transition duration-700"
+    class="absolute bottom-0 left-0 w-full translate-y-[100%] bg-black/50 p-4 text-white backdrop-blur-md transition duration-700 group-hover:translate-y-0 dark:text-white"
   >
     <h3 class="mr-2 text-xl">{title}</h3>
   </div>

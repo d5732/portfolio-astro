@@ -1,10 +1,17 @@
 ---
-import { IProjectDetails } from "@types";
+import type { IProject } from "../../types";
 
-const { projectDetail } = Astro.props as IProjectDetails;
-const { title, thumbnail, liveUrl, githubUrl, description, environment } =
-  projectDetail;
-const { isLazy } = Astro.props;
+type Props = IProject & { isLazy: boolean };
+
+const {
+  title,
+  thumbnail,
+  deploymentUrl,
+  githubUrl,
+  description,
+  environment,
+  isLazy,
+} = Astro.props;
 ---
 
 <!-- todo: image optimization https://docs.astro.build/en/guides/integrations-guide/image/#installation -->
@@ -37,11 +44,10 @@ const { isLazy } = Astro.props;
             </a>
           )
         }
-
         {
-          liveUrl && (
+          deploymentUrl && (
             <a
-              href={liveUrl}
+              href={deploymentUrl}
               class="ml-1 rounded-full bg-black/50 p-3 text-white backdrop-blur-md"
               aria-label="Project Link"
               target="_blank"
@@ -68,7 +74,7 @@ const { isLazy } = Astro.props;
       <img
         src={thumbnail}
         class="h-auto w-full scale-100 transition duration-[1.5s] hover:scale-110"
-        loading="lazy"
+        loading={isLazy ? "lazy" : undefined}
         width="100%"
         height="100%"
         alt="featureImage"

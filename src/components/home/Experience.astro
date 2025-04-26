@@ -1,7 +1,13 @@
 ---
-import { IExperiences } from "@types";
+import type { info } from "../../data/info";
+import type { IExperience } from "../../types";
 
-const { title, details } = Astro.props as IExperiences;
+interface Props {
+  heading: (typeof info.experience)[number]["title"];
+  items: IExperience[];
+}
+
+const { heading: title, items } = Astro.props;
 ---
 
 <section
@@ -10,7 +16,7 @@ const { title, details } = Astro.props as IExperiences;
   <h2 class="mt-16 w-[15rem]">{title}</h2>
   <div class="w-full">
     {
-      details.map((item) => (
+      items.map((item) => (
         <div class="my-16">
           <div class="flex flex-wrap items-start justify-between">
             <div>

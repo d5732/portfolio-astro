@@ -1,8 +1,8 @@
 ---
 import { info } from "@data";
-import { IMetaHead } from "@types";
+import type { IMetaHeadProps } from "@types";
 
-const { title, description, ogImageUrl } = Astro.props as IMetaHead;
+const { title, description, ogImageUrl } = Astro.props as IMetaHeadProps;
 ---
 
 <meta charset="UTF-8" />

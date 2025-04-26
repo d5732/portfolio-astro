@@ -1,21 +1,19 @@
 ---
-import { info } from "@data";
-import { IProjects } from "@types";
-
 import MetaHead from "@components/general/MetaHead.astro";
+import ProjectDetail from "@components/projects/ProjectDetail.astro";
 import Layout from "@layouts/Layout.astro";
-import ProjectArticle from "@components/projects/ProjectArticle.astro";
 
-const { projects } = info as IProjects;
+import { info } from "@data";
+const { projects } = info;
 ---
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <MetaHead
       title={"Projects"}
       description={info.metaDescriptions.projects}
-      ogImageUrl={info.ogImageUrl}
+      ogImageUrl={info.openGraphImageUrl}
     />
   </head>
 
@@ -26,7 +24,7 @@ const { projects } = info as IProjects;
         <div class="grid grid-cols-1 gap-4">
           {
             projects.map((project, index) => (
-              <ProjectArticle projectDetail={project} isLazy={index > 0} />
+              <ProjectDetail {...project} isLazy={index > 0} />
             ))
           }
         </div>

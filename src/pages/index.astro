@@ -1,11 +1,10 @@
 ---
-import { info } from "@data";
-
-import Layout from "@layouts/Layout.astro";
-import Hero from "@components/home/Hero.astro";
-import Experience from "@components/home/Experience.astro";
-import ProjectsWrapper from "@components/home/ProjectsWrapper.astro";
 import MetaHead from "@components/general/MetaHead.astro";
+import Experience from "@components/home/Experience.astro";
+import Hero from "@components/home/Hero.astro";
+import ProjectsWrapper from "@components/home/ProjectsWrapper.astro";
+import { info } from "@data";
+import Layout from "@layouts/Layout.astro";
 
 const featuredLimit = 6;
 const featuredProjects = info.projects.reduce((acc, project) => {
@@ -16,13 +15,13 @@ const featuredProjects = info.projects.reduce((acc, project) => {
 }, []);
 ---
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <MetaHead
       title={"Portfolio"}
       description={info.metaDescriptions.home}
-      ogImageUrl={info.ogImageUrl}
+      ogImageUrl={info.openGraphImageUrl}
     />
   </head>
   <body>
@@ -58,9 +57,9 @@ const featuredProjects = info.projects.reduce((acc, project) => {
           <span class="ml-1 text-sm leading-none">Download My Resume</span>
         </a>
       </div>
-      <Experience title={"EXPERIENCE"} details={info.experience} />
-      <Experience title={"EDUCATION"} details={info.education} />
-      <Experience title={"CERTIFICATIONS"} details={info.certifications} />
+      <Experience heading={"EXPERIENCE"} items={info.experience} />
+      <Experience heading={"EDUCATION"} items={info.education} />
+      <Experience heading={"CERTIFICATIONS"} items={info.certifications} />
 
       <section class="mt-16">
         <h2 class="dark:text-light">FEATURED PROJECTS</h2>

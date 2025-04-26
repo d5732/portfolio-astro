@@ -1,7 +1,10 @@
 ---
-import { IHeroProps } from "@types";
+interface Props {
+  name: string;
+  summary: string[];
+}
 
-const { name, summary } = Astro.props as IHeroProps;
+const { name, summary } = Astro.props;
 const avatar_url = "https://avatars.githubusercontent.com/u/113398750?v=4";
 ---
 

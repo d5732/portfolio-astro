@@ -1,20 +1,18 @@
 ---
-import { info } from "@data";
-import { IContactProps } from "@types";
-
 import MetaHead from "@components/general/MetaHead.astro";
+import { info } from "@data";
 import Layout from "@layouts/Layout.astro";
 
-const { email } = info as IContactProps;
+const { email } = info.socialMedia;
 ---
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <MetaHead
       title={"Contact"}
       description={info.metaDescriptions.contact}
-      ogImageUrl={info.ogImageUrl}
+      ogImageUrl={info.openGraphImageUrl}
     />
   </head>
 
@@ -27,7 +25,7 @@ const { email } = info as IContactProps;
           <div class="my-8 flex items-center gap-8">
             <a
               target="_blank"
-              href={`mailto:${info.email}`}
+              href={`mailto:${email}`}
               aria-label="Send me a message me"
               class="rounded-lg bg-slate-200 py-4 px-8 dark:bg-[#202020] dark:text-light"
             >
@@ -45,7 +43,7 @@ const { email } = info as IContactProps;
                 ><line x1="22" y1="2" x2="11" y2="13"></line><polygon
                   points="22 2 15 22 11 13 2 9 22 2"></polygon></svg
               >
-              <span class="ml-1 text-lg">Denwa.dev@gmail.com</span>
+              <span class="ml-1 text-lg">{email}</span>
             </a>
           </div>
           <p class="text-lg dark:text-light">

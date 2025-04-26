@@ -11,7 +11,7 @@ import { info } from "@data";
       info.pages.map((item) => (
         <li>
           <a
-            class="dark:text-light block py-4 px-3 text-right text-lg"
+            class="block py-4 px-3 text-right text-lg dark:text-light"
             href={`/${item}`}
           >
             {item.charAt(0).toUpperCase() + item.slice(1)}
@@ -24,15 +24,15 @@ import { info } from "@data";
 
 <script>
   const toggleMobileMenuNav = () => {
-    document.getElementById("mobile-menu-nav").classList.toggle("hidden");
+    document.getElementById("mobile-menu-nav")!.classList.toggle("hidden");
     document
-      .getElementById("mobile-menu-button-expand")
+      .getElementById("mobile-menu-button-expand")!
       .classList.toggle("hidden");
     document
-      .getElementById("mobile-menu-button-collapse")
+      .getElementById("mobile-menu-button-collapse")!
       .classList.toggle("hidden");
   };
   document
-    .getElementById("mobile-menu-button")
+    .getElementById("mobile-menu-button")!
     .addEventListener("click", toggleMobileMenuNav);
 </script>

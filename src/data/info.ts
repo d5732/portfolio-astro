@@ -1,3 +1,5 @@
+import type { IInfo } from "../types";
+
 function getYearsSinceDate(date: Date): number {
   const msPerYear = 365.25 * 24 * 60 * 60 * 1000;
   return Math.round((new Date().getTime() - date.getTime()) / msPerYear);
@@ -8,9 +10,9 @@ const yearsOfSoftwareDevelopmentExperience = getYearsSinceDate(
 );
 const yearsOfItExperience = getYearsSinceDate(new Date("2006"));
 
-export const info = {
+export const info: IInfo = {
   baseUrl: "https://denwa-dev.vercel.app/",
-  ogImageUrl: "/android-chrome-512x512.png",
+  openGraphImageUrl: "/android-chrome-512x512.png",
   resumeUrl: "assets/resume/Dennis Drueck Resume.pdf",
   pages: ["about", "contact", "projects"],
   metaDescriptions: {
@@ -21,7 +23,6 @@ export const info = {
   },
   name: "Dennis Drueck",
   jobDescription: "Full-Stack Developer",
-  email: "Denwa.dev@gmail.com",
   socialMedia: {
     github: "https://github.com/d5732",
     email: "Denwa.dev@gmail.com",
@@ -137,7 +138,6 @@ export const info = {
       ],
     },
   ],
-
   certifications: [
     {
       title: "FreeCodeCamp.org",
@@ -160,7 +160,7 @@ export const info = {
       isFeatured: true,
       thumbnail: "/assets/images/project-thumbnails/mataction-site-sm.jpg",
       image: "/assets/images/project-thumbnails/mataction-site.jpg",
-      liveUrl: "https://www.mataction.com/",
+      deploymentUrl: "https://www.mataction.com/",
       description: [
         "Led design and implementation of solutions for workflow automation, geolocation, and image processing in collaboration with the CTO and product manager.",
         "Reduced cross-platform support requests by implementing responsiveness and input validation across 50+ web pages using PHP, Blade, jQuery, and Bootstrap.",
@@ -318,7 +318,7 @@ export const info = {
       isFeatured: true,
       thumbnail: "/assets/images/project-thumbnails/trapmonkie-site-sm.jpg",
       image: "/assets/images/project-thumbnails/trapmonkie-site.jpg",
-      liveUrl: "https://trapmonkie.io/",
+      deploymentUrl: "https://trapmonkie.io/",
       description: [
         "Created and maintained a single page application to facilitate blockchain transactions in collaboration with the product manager and 1 additional developer.",
         "Delivered MVP in 1 week, and 2 major updates within 1 week of requirements approval.",
@@ -347,7 +347,7 @@ export const info = {
       isFeatured: false,
       thumbnail: "/assets/images/project-thumbnails/ethereumhomies-site-sm.jpg",
       image: "/assets/images/project-thumbnails/ethereumhomies-site.jpg",
-      liveUrl: "https://ethereumhomies.com/",
+      deploymentUrl: "https://ethereumhomies.com/",
       description: [
         "Enabled my client to capture explosive market growth by delivering MVP in 5 days.",
         "Authorized blockchain accounts using web3.js to streamline asset delivery through a self-service portal.",
