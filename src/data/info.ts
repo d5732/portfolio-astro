@@ -314,11 +314,10 @@ export const info: IInfo = {
       ],
     },
     {
-      title: "TrapMonkie.io",
+      title: "TrapMonkie",
       isFeatured: true,
       thumbnail: "/assets/images/project-thumbnails/trapmonkie-site-sm.jpg",
       image: "/assets/images/project-thumbnails/trapmonkie-site.jpg",
-      deploymentUrl: "https://trapmonkie.io/",
       description: [
         "Created and maintained a single page application to facilitate blockchain transactions in collaboration with the product manager and 1 additional developer.",
         "Delivered MVP in 1 week, and 2 major updates within 1 week of requirements approval.",
@@ -343,11 +342,10 @@ export const info: IInfo = {
       ],
     },
     {
-      title: "EthereumHomies.com",
+      title: "EthereumHomies",
       isFeatured: false,
       thumbnail: "/assets/images/project-thumbnails/ethereumhomies-site-sm.jpg",
       image: "/assets/images/project-thumbnails/ethereumhomies-site.jpg",
-      deploymentUrl: "https://ethereumhomies.com/",
       description: [
         "Enabled my client to capture explosive market growth by delivering MVP in 5 days.",
         "Authorized blockchain accounts using web3.js to streamline asset delivery through a self-service portal.",
