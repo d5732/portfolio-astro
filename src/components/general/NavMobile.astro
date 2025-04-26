@@ -1,20 +1,22 @@
 ---
 import { info } from "@data";
+
+import { getPageUri, capitalize } from "@utils";
 ---
 
 <nav
   id="mobile-menu-nav"
-  class="h-100 absolute top-[80px] bottom-0 right-0 z-10 hidden w-full bg-inherit sm:top-[123px]"
+  class="h-100 absolute top-[80px] bottom-0 right-0 z-20 hidden w-full bg-inherit sm:top-[123px]"
 >
   <ul class="container flex flex-col justify-between">
     {
-      info.pages.map((item) => (
+      info.pages.map((pageName) => (
         <li>
           <a
             class="block py-4 px-3 text-right text-lg dark:text-light"
-            href={`/${item}`}
+            href={`/${getPageUri(pageName)}`}
           >
-            {item.charAt(0).toUpperCase() + item.slice(1)}
+            {capitalize(pageName)}
           </a>
         </li>
       ))

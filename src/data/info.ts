@@ -14,7 +14,7 @@ export const info: IInfo = {
   baseUrl: "https://denwa-dev.vercel.app/",
   openGraphImageUrl: "/android-chrome-512x512.png",
   resumeUrl: "assets/resume/Dennis Drueck Resume.pdf",
-  pages: ["about", "contact", "projects"],
+  pages: ["home", "about", "contact", "projects"],
   metaDescriptions: {
     home: "I'm Dennis Drueck, a full-stack developer based in Naperville, Illinois.",
     about: "My bio is available on this page.",
