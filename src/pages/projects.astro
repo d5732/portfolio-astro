@@ -1,39 +1,38 @@
 ---
-import { info } from "@data";
-import { IProjects } from "@types";
-
 import MetaHead from "@components/general/MetaHead.astro";
+import ProjectDetail from "@components/projects/ProjectDetail.astro";
 import Layout from "@layouts/Layout.astro";
-import ProjectArticle from "@components/projects/ProjectArticle.astro";
 
-const { projects } = info as IProjects;
+import { info } from "@data";
+const { projects } = info;
 ---
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-    <head>
-        <MetaHead
-            title={"Projects"}
-            description={info.metaDescriptions.projects}
-            ogImageUrl={info.ogImageUrl}
-        />
-    </head>
+  <head>
+    <MetaHead title={"Projects"} description={info.metaDescriptions.projects} />
+  </head>
 
-    <body>
-        <Layout>
-            <section>
-                <h1 style="line-height: 1.2;">Projects</h1>
-                <div class="grid grid-cols-1 gap-4">
-                    {
-                        projects.map((project, index) => (
-                            <ProjectArticle
-                                projectDetail={project}
-                                isLazy={index > 0}
-                            />
-                        ))
-                    }
-                </div>
-            </section>
-        </Layout>
-    </body>
+  <body>
+    <Layout>
+      <article>
+        <h1 style="line-height: 1.2;">Projects</h1>
+        <div class="grid grid-cols-1">
+          {
+            projects.map(function (project, index, arr) {
+              const isLast = index === arr.length - 1;
+              return (
+                <>
+                  <ProjectDetail {...project} lazyLoadImg={index > 0} />
+                  {!isLast && (
+                    <hr class="my-12 h-0.5 border-t-0 bg-neutral-100 dark:bg-white/10" />
+                  )}
+                </>
+              );
+            })
+          }
+        </div>
+      </article>
+    </Layout>
+  </body>
 </html>

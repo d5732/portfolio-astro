@@ -1,0 +1,40 @@
+---
+import { info } from "@data";
+
+import { getPageUri, capitalize } from "@utils";
+---
+
+<nav
+  id="mobile-menu-nav"
+  class="h-100 absolute top-[80px] bottom-0 right-0 z-20 hidden w-full bg-inherit sm:top-[123px]"
+>
+  <ul class="container flex flex-col justify-between">
+    {
+      info.pages.map((pageName) => (
+        <li>
+          <a
+            class="block py-4 px-3 text-right text-lg leading-relaxed dark:text-light"
+            href={`/${getPageUri(pageName)}`}
+          >
+            {capitalize(pageName)}
+          </a>
+        </li>
+      ))
+    }
+  </ul>
+</nav>
+
+<script>
+  const toggleMobileMenuNav = () => {
+    document.getElementById("mobile-menu-nav")!.classList.toggle("hidden");
+    document
+      .getElementById("mobile-menu-button-expand")!
+      .classList.toggle("hidden");
+    document
+      .getElementById("mobile-menu-button-collapse")!
+      .classList.toggle("hidden");
+  };
+  document
+    .getElementById("mobile-menu-button")!
+    .addEventListener("click", toggleMobileMenuNav);
+</script>

@@ -1,39 +1,37 @@
+import { Page, type IInfo } from "@types";
+
 function getYearsSinceDate(date: Date): number {
   const msPerYear = 365.25 * 24 * 60 * 60 * 1000;
   return Math.round((new Date().getTime() - date.getTime()) / msPerYear);
 }
 
-const yearsOfSoftwareDevelopmentExperience = getYearsSinceDate(
+const yearsOfSoftwareEngineeringExperience = getYearsSinceDate(
   new Date("2019")
 );
-const yearsOfItExperience = getYearsSinceDate(new Date("2006"));
+const yearsOfInformationTechnologyExperience = getYearsSinceDate(
+  new Date("2006")
+);
 
-export const info = {
+export const info: IInfo = {
   baseUrl: "https://denwa-dev.vercel.app/",
-  ogImageUrl: "/android-chrome-512x512.png",
+  openGraphImageUrl: "/android-chrome-512x512.png",
   resumeUrl: "assets/resume/Dennis Drueck Resume.pdf",
-  pages: ["about", "contact", "projects"],
+  pages: [Page.Home, Page.About, Page.Contact, Page.Projects],
   metaDescriptions: {
-    home: "I'm Dennis Drueck, a full-stack developer based in Naperville, Illinois.",
+    home: "I'm Dennis Drueck, a Software Engineer based in Naperville, Illinois.",
     about: "My bio is available on this page.",
     contact: "My contact details are available on this page.",
     projects: "My projects are available in this page.",
   },
   name: "Dennis Drueck",
-  jobDescription: "Full-Stack Developer",
-  email: "Denwa.dev@gmail.com",
-  socialMedia: {
-    github: "https://github.com/d5732",
-    email: "Denwa.dev@gmail.com",
-    linkedin: "https://www.linkedin.com/in/dennis-d-58764754/",
-  },
+  subtitle: "I'm a Software Engineer based in Naperville, Illinois.",
   summary: [
-    `I'm a software engineer based in Naperville, Illinois. With ${yearsOfSoftwareDevelopmentExperience} years of software development experience and ${yearsOfItExperience} years in IT, I can readily excel in any environment. My diverse background spans multinational corporations like Tesla and E. & J. Gallo, as well as start-ups and freelancing.`,
+    `With ${yearsOfSoftwareEngineeringExperience} years of software development experience and ${yearsOfInformationTechnologyExperience} years in Information Technology, I can readily excel in any environment. My diverse background spans multinational corporations like Tesla and E. & J. Gallo, as well as start-ups and freelancing.`,
     "I've created pragmatic solutions to numerous complex problems, prioritizing scalability and engineering efficiency. Currently, I'm building full-stack frameworks for Tempus AI's DNA sequencing pipeline, improving delivery timelines, and streamlining user experience.",
     "My commitment to continuous learning and growth empowers me to tackle increasingly challenging issues and deliver high-impact, easy-to-maintain solutions.",
   ],
   about: [
-    `I've developed software professionally for the past ${yearsOfSoftwareDevelopmentExperience} years, and have more than ${yearsOfItExperience} years of IT experience overall. I've been privileged to work with some awesome companies like Tesla, E. & J. Gallo Winery, as well as some really cool startups.`,
+    `I've built software professionally for the past ${yearsOfSoftwareEngineeringExperience} years, and have more than ${yearsOfInformationTechnologyExperience} years of Information Technology experience overall. I've been privileged to work with some awesome companies like Tesla, E. & J. Gallo Winery, as well as some really cool startups.`,
     "Growing up in the Chicago area, my family owned and operated one of the largest suppliers of Camaro parts in the United States, which gave me early insight into the intersection of business and technology.",
     "In 2019, I landed a position developing website widgets for a software as a service company. There, I used JavaScript, HTML, CSS, and Bootstrap to create a component library. I also automated processes related to data entry and report compilation using Python.",
     "Starting in 2021, I shifted into freelancing as a full-stack developer, mostly using the PERN stack to build web apps. I fell in love with the challenges of discovering requirements and delivering software rapidly keeping overhead low and negotiating the unexpected. Throughout that time, I have completed various certifications and educational programs to learn additional frameworks, and design patterns,",
@@ -136,10 +134,9 @@ export const info = {
       ],
     },
   ],
-
   certifications: [
     {
-      title: "FreeCodeCamp.org",
+      name: "FreeCodeCamp.org",
       location: "San Francisco, CA",
       startDate: "06/2021",
       endDate: "12/2022",
@@ -159,7 +156,7 @@ export const info = {
       isFeatured: true,
       thumbnail: "/assets/images/project-thumbnails/mataction-site-sm.jpg",
       image: "/assets/images/project-thumbnails/mataction-site.jpg",
-      liveUrl: "https://www.mataction.com/",
+      deploymentUrl: "https://www.mataction.com/",
       description: [
         "Led design and implementation of solutions for workflow automation, geolocation, and image processing in collaboration with the CTO and product manager.",
         "Reduced cross-platform support requests by implementing responsiveness and input validation across 50+ web pages using PHP, Blade, jQuery, and Bootstrap.",
@@ -187,7 +184,7 @@ export const info = {
       isFeatured: true,
       thumbnail: "/assets/images/project-thumbnails/astro-portfolio-sm.jpg",
       image: "/assets/images/project-thumbnails/astro-portfolio.jpg",
-      githubUrl: "https://github.com/d5732/portfolio-astro",
+      githubUrl: "https://github.com/denwa-dev/portfolio-astro",
       description: [
         "Implemented 14 user stories to create a portfolio website, including reusable components, API data fetching, external strings, routing, CSS animations, responsive layouts, WCAG compliance, and light/dark mode.",
         "Selected Vercel and Astro.js framework for server-side rendering, reduced JavaScript bloat, and straightforward CI/CD pipeline.",
@@ -209,7 +206,7 @@ export const info = {
       isFeatured: true,
       thumbnail: "/assets/images/project-thumbnails/twitter-clone-api-sm.jpg",
       image: "/assets/images/project-thumbnails/twitter-clone-api.jpg",
-      githubUrl: "https://github.com/d5732/twitter-clone-api",
+      githubUrl: "https://github.com/denwa-dev/twitter-clone-api",
       description: [
         "Created a REST API web service with Java Spring, including 30 HTTP endpoints to CRUD data related to accounts, tweets, hashtags, likes, follows, replies, and reposts.",
         "Tested and debugged API functionality using IntelliJ debugger, SQL Shell, and Postman, enabling rapid development of endpoints.",
@@ -238,7 +235,7 @@ export const info = {
       thumbnail:
         "/assets/images/project-thumbnails/spotify-guessing-game-sm.jpg",
       image: "/assets/images/project-thumbnails/spotify-guessing-game.jpg",
-      githubUrl: "https://github.com/d5732/spotify-guessing-game",
+      githubUrl: "https://github.com/denwa-dev/spotify-guessing-game",
       description: [
         "Developed a stateful browser game, allowing users to play songs and guess the artist by fetching genres, artists, and songs from Spotify Web API.",
         "Implemented capability to play again with fresh data by creating configurable components and routes using React.js, Material UI, and React Router.",
@@ -264,7 +261,7 @@ export const info = {
       thumbnail:
         "/assets/images/project-thumbnails/company-management-portal-sm.jpg",
       image: "/assets/images/project-thumbnails/company-management-portal.jpg",
-      githubUrl: "https://github.com/d5732/company-management-portal",
+      githubUrl: "https://github.com/denwa-dev/company-management-portal",
       description: [
         "Built a full-stack application that allows users to edit employees, announcements, teams, and projects using React.js, Java Spring, JPA, JDBC, and PostgreSQL.",
         "Clarified client expectations to ensure all features aligned with the customer's needs, creating distinct objectives for developers.",
@@ -296,7 +293,7 @@ export const info = {
       thumbnail: "/assets/images/project-thumbnails/exercise-tracker-sm.jpg",
       image: "/assets/images/project-thumbnails/exercise-tracker.jpg",
       githubUrl:
-        "https://github.com/d5732/freeCodeCamp-certifications/tree/main/back-end-development-and-apis/exercise-tracker",
+        "https://github.com/denwa-dev/freeCodeCamp-certifications/tree/main/back-end-development-and-apis/exercise-tracker",
       description: [
         "Created a full-stack application that allows users to submit exercise sessions and review exercise history using JavaScript, Express.js, and MongoDB Atlas NoSQL cloud database.",
         "Built REST API web service, model, and controller functionality using Express.js.",
@@ -313,11 +310,10 @@ export const info = {
       ],
     },
     {
-      title: "TrapMonkie.io",
+      title: "TrapMonkie",
       isFeatured: true,
       thumbnail: "/assets/images/project-thumbnails/trapmonkie-site-sm.jpg",
       image: "/assets/images/project-thumbnails/trapmonkie-site.jpg",
-      liveUrl: "https://trapmonkie.io/",
       description: [
         "Created and maintained a single page application to facilitate blockchain transactions in collaboration with the product manager and 1 additional developer.",
         "Delivered MVP in 1 week, and 2 major updates within 1 week of requirements approval.",
@@ -342,11 +338,10 @@ export const info = {
       ],
     },
     {
-      title: "EthereumHomies.com",
+      title: "EthereumHomies",
       isFeatured: false,
       thumbnail: "/assets/images/project-thumbnails/ethereumhomies-site-sm.jpg",
       image: "/assets/images/project-thumbnails/ethereumhomies-site.jpg",
-      liveUrl: "https://ethereumhomies.com/",
       description: [
         "Enabled my client to capture explosive market growth by delivering MVP in 5 days.",
         "Authorized blockchain accounts using web3.js to streamline asset delivery through a self-service portal.",
@@ -370,4 +365,10 @@ export const info = {
       ],
     },
   ],
+  socialMedia: {
+    github: "https://github.com/denwa-dev",
+    email: "Denwa.dev@gmail.com",
+    linkedin: "https://www.linkedin.com/in/dennis-d-58764754/",
+    medium: "https://medium.com/@denwa.dev",
+  },
 };

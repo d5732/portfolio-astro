@@ -1,136 +1,82 @@
 ---
 import { info } from "@data";
-import { createLogo } from "@utils";
-import MobileMenu from "./MobileMenu.astro";
+import { getInitialsFromName } from "@utils";
+import NavMobile from "./NavMobile.astro";
+import NavDesktop from "./NavDesktop.astro";
 ---
 
 <header
-    class="container relative z-20 flex h-[80px] items-center justify-between bg-inherit sm:h-[123px]"
+  class="container relative z-20 flex h-[80px] items-center justify-between bg-inherit sm:h-[123px]"
 >
-    <a
-        class="font-outfit text-2xl font-semibold dark:font-semibold dark:text-light"
-        href="/"
-        >{createLogo(info.name)}.
-    </a>
-    <nav>
-        <ul class="flex items-center">
-            {
-                info.pages.map((item) => (
-                    <li>
-                        <a
-                            class="dark:text-light hidden p-4 text-lg sm:block"
-                            href={`/${item}`}
-                        >
-                            {item.charAt(0).toUpperCase() + item.slice(1)}
-                        </a>
-                    </li>
-                ))
-            }
+  <a
+    class="font-outfit text-2xl font-semibold dark:font-semibold dark:text-light"
+    href="/"
+    >{getInitialsFromName(info.name)}.
+  </a>
 
-            <li>
-                <button
-                    aria-label="theme-button"
-                    id="theme-button"
-                    class="ml-2 rounded-lg bg-slate-200 p-4 dark:bg-[#202020] dark:text-light"
-                ></button>
-            </li>
-            <li>
-                <button
-                    aria-label="mobile-menu-button"
-                    id="mobile-menu-button"
-                    class="ml-2 block rounded-lg bg-slate-200 p-4 text-lg dark:bg-[#202020] dark:text-light sm:hidden"
-                >
-                    <svg
-                        id="mobile-menu-button-expand"
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="18"
-                        height="18"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        class="feather feather-menu"
-                        ><line x1="3" y1="12" x2="21" y2="12"></line><line
-                            x1="3"
-                            y1="6"
-                            x2="21"
-                            y2="6"></line><line x1="3" y1="18" x2="21" y2="18"
-                        ></line></svg
-                    >
-                    <svg
-                        id="mobile-menu-button-collapse"
-                        xmlns="http://www.w3.org/2000/svg"
-                        width="18"
-                        height="18"
-                        viewBox="0 0 24 24"
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-width="2"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                        class="feather feather-x hidden"
-                        ><line x1="18" y1="6" x2="6" y2="18"></line><line
-                            x1="6"
-                            y1="6"
-                            x2="18"
-                            y2="18"></line></svg
-                    >
-                </button>
-            </li>
-        </ul>
-    </nav>
+  <NavDesktop />
 </header>
-<MobileMenu />
+{
+  /** Mobile Nav Menu needs to be outside header to pop over the page correctly */
+}
+<NavMobile />
 
 <script>
-    const moon = `<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-moon"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>`;
-    const sun = `<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-sun"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>`;
-    const themeButton = document.getElementById("theme-button");
-    const browserTheme = document.querySelector('[name="theme-color"]') as HTMLMetaElement;
-    let isDark: boolean;
-    const theme = (() => {
-        if (
-            typeof localStorage !== "undefined" &&
-            localStorage.getItem("theme")
-        ) {
-            return localStorage.getItem("theme");
-        }
-        if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
-            return "dark";
-        }
-        return "light";
-    })();
+  const enum Theme {
+    Dark = "dark",
+    Light = "light",
+  }
+  interface ThemeConfigMap {
+    background: `#${string}`;
+    icon: string;
+    next: Theme;
+  }
+  const themeConfigMap: Record<Theme, ThemeConfigMap> = {
+    [Theme.Dark]: {
+      background: "#111111",
+      icon: /** Moon */ `<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-moon"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>`,
+      next: Theme.Light,
+    },
+    [Theme.Light]: {
+      background: "#FFFFFF",
+      icon: /** Sun */ `<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-sun"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>`,
+      next: Theme.Dark,
+    },
+  };
 
-    if (theme === "light") {
-        document.documentElement.setAttribute("data-theme", "light");
-        isDark = true;
-        themeButton.innerHTML = moon;
-        browserTheme.content = "#FFFFFF";
+  const metaThemeColor: HTMLMetaElement = document.querySelector(
+    '[name="theme-color"]'
+  )!;
+  const themeButton = document.getElementById("theme-button")!;
+
+  let currentTheme: Theme | undefined;
+
+  const setTheme = (theme: Theme) => {
+    currentTheme = theme;
+    metaThemeColor.content = themeConfigMap[theme].background;
+    themeButton.innerHTML = themeConfigMap[theme].icon;
+    document.documentElement.setAttribute("data-theme", theme);
+    localStorage.theme = theme;
+  };
+
+  const initTheme = () => {
+    const localStorageTheme = localStorage.getItem("theme") as Theme;
+    // Validate
+    if ([Theme.Dark, Theme.Light].includes(localStorageTheme)) {
+      setTheme(localStorageTheme);
+
+      // Otherwise, fallback to system preference
+    } else if (matchMedia("(prefers-color-scheme: dark)").matches) {
+      setTheme(Theme.Dark);
     } else {
-        document.documentElement.setAttribute("data-theme", "dark");
-        isDark = false;
-        themeButton.innerHTML = sun;
-        browserTheme.content = "#111111";
+      setTheme(Theme.Light);
     }
-    window.localStorage.setItem("theme", theme);
+  };
 
-    const darkModeHandler = () => {
-        if (isDark) {
-            document.documentElement.setAttribute("data-theme", "dark");
-            localStorage.theme = "dark";
-            isDark = false;
-            themeButton.innerHTML = sun;
-            browserTheme.content = "#111111";
-        } else {
-            document.documentElement.setAttribute("data-theme", "light");
-            localStorage.theme = "light";
-            isDark = true;
-            themeButton.innerHTML = moon;
-            browserTheme.content = "#FFFFFF";
-        }
-    };
+  const handleThemeChange = () => {
+    setTheme(themeConfigMap[currentTheme!].next);
+  };
 
-    themeButton.addEventListener("click", darkModeHandler);
+  initTheme();
+  themeButton.addEventListener("click", handleThemeChange);
 </script>

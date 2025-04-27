@@ -1,9 +1,15 @@
 # Deployed to: https://denwa-dev.vercel.app/
 
-## Dependencies
+## Getting started
 
-Target Node.js version: v18.12.1
-Target npm version: 8.19.2
+Run the following commands:
+
+```
+brew install nvm
+nvm use
+npm install
+npm start
+```
 
 ## Structure
 

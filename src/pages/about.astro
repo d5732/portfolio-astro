@@ -1,31 +1,31 @@
 ---
-import { info } from "@data";
-
 import MetaHead from "@components/general/MetaHead.astro";
+import { info } from "@data";
 import Layout from "@layouts/Layout.astro";
 
-const { about }: { about: string[] } = info;
-const pClasses = "dark:text-light text-lg mb-8";
+const { metaDescriptions, about } = info;
 ---
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-    <head>
-        <MetaHead
-            title={"About"}
-            description={info.metaDescriptions.about}
-            ogImageUrl={info.ogImageUrl}
-        />
-    </head>
+  <head>
+    <MetaHead title={"About"} description={metaDescriptions.about} />
+  </head>
 
-    <body>
-        <Layout>
-            <section>
-                <h1 style="line-height: 1.2;">About</h1>
-                <div class="my-16 w-full">
-                    {about.map((item) => <p class={`${pClasses}`}>{item}</p>)}
-                </div>
-            </section>
-        </Layout>
-    </body>
+  <body>
+    <Layout>
+      <section>
+        <h1 style="line-height: 1.2;">About</h1>
+        <div class="w-full">
+          {
+            about.map((item) => (
+              <p class="mb-8 max-w-lg text-lg leading-relaxed dark:text-light">
+                {item}
+              </p>
+            ))
+          }
+        </div>
+      </section>
+    </Layout>
+  </body>
 </html>
