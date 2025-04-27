@@ -6,14 +6,14 @@ type Props = IExperienceProps;
 const { heading, items } = Astro.props;
 ---
 
-<section
+<article
   class="flex flex-col items-start justify-between dark:text-light sm:flex-row"
 >
   <h2 class="w-[15rem]">{heading}</h2>
   <div class="flex w-full flex-col gap-16">
     {
       items.map((item) => (
-        <article>
+        <section>
           <div class="flex flex-wrap items-start justify-between">
             <div>
               <h3 class="text-xl font-semibold">{item.title}</h3>
@@ -41,8 +41,8 @@ const { heading, items } = Astro.props;
               );
             })}
           </ul>
-        </article>
+        </section>
       ))
     }
   </div>
-</section>
+</article>

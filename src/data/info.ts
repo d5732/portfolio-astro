@@ -1,4 +1,4 @@
-import type { IInfo } from "@types";
+import { Page, type IInfo } from "@types";
 
 function getYearsSinceDate(date: Date): number {
   const msPerYear = 365.25 * 24 * 60 * 60 * 1000;
@@ -16,7 +16,7 @@ export const info: IInfo = {
   baseUrl: "https://denwa-dev.vercel.app/",
   openGraphImageUrl: "/android-chrome-512x512.png",
   resumeUrl: "assets/resume/Dennis Drueck Resume.pdf",
-  pages: ["home", "about", "contact", "projects"],
+  pages: [Page.Home, Page.About, Page.Contact, Page.Projects],
   metaDescriptions: {
     home: "I'm Dennis Drueck, a Software Engineer based in Naperville, Illinois.",
     about: "My bio is available on this page.",
@@ -24,15 +24,9 @@ export const info: IInfo = {
     projects: "My projects are available in this page.",
   },
   name: "Dennis Drueck",
-  profession: "Software Engineer",
-  socialMedia: {
-    github: "https://github.com/denwa-dev",
-    email: "Denwa.dev@gmail.com",
-    linkedin: "https://www.linkedin.com/in/dennis-d-58764754/",
-    medium: "https://medium.com/@denwa.dev",
-  },
+  subtitle: "I'm a Software Engineer based in Naperville, Illinois.",
   summary: [
-    `I'm a Software Engineer based in Naperville, Illinois. With ${yearsOfSoftwareEngineeringExperience} years of software development experience and ${yearsOfInformationTechnologyExperience} years in Information Technology, I can readily excel in any environment. My diverse background spans multinational corporations like Tesla and E. & J. Gallo, as well as start-ups and freelancing.`,
+    `With ${yearsOfSoftwareEngineeringExperience} years of software development experience and ${yearsOfInformationTechnologyExperience} years in Information Technology, I can readily excel in any environment. My diverse background spans multinational corporations like Tesla and E. & J. Gallo, as well as start-ups and freelancing.`,
     "I've created pragmatic solutions to numerous complex problems, prioritizing scalability and engineering efficiency. Currently, I'm building full-stack frameworks for Tempus AI's DNA sequencing pipeline, improving delivery timelines, and streamlining user experience.",
     "My commitment to continuous learning and growth empowers me to tackle increasingly challenging issues and deliver high-impact, easy-to-maintain solutions.",
   ],
@@ -371,4 +365,10 @@ export const info: IInfo = {
       ],
     },
   ],
+  socialMedia: {
+    github: "https://github.com/denwa-dev",
+    email: "Denwa.dev@gmail.com",
+    linkedin: "https://www.linkedin.com/in/dennis-d-58764754/",
+    medium: "https://medium.com/@denwa.dev",
+  },
 };

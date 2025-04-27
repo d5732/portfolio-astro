@@ -1,4 +1,6 @@
-export const createLogo = (name: string) =>
+import { Page } from "@types";
+
+export const getInitialsFromName = (name: string) =>
   name
     .split(" ")
     .map((word) => word[0])
@@ -7,4 +9,5 @@ export const createLogo = (name: string) =>
 
 export const capitalize = (s: string) => s[0]?.toUpperCase() + s.slice(1);
 
-export const getPageUri = (page: string) => (page === "home" ? "" : page);
+/** Helps resolve an empty string instead of "home" for the homepage */
+export const getPageUri = (page: string) => (page === Page.Home ? "" : page);

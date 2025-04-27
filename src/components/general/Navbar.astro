@@ -1,6 +1,6 @@
 ---
 import { info } from "@data";
-import { createLogo } from "@utils";
+import { getInitialsFromName } from "@utils";
 import NavMobile from "./NavMobile.astro";
 import NavDesktop from "./NavDesktop.astro";
 ---
@@ -11,7 +11,7 @@ import NavDesktop from "./NavDesktop.astro";
   <a
     class="font-outfit text-2xl font-semibold dark:font-semibold dark:text-light"
     href="/"
-    >{createLogo(info.name)}.
+    >{getInitialsFromName(info.name)}.
   </a>
 
   <NavDesktop />

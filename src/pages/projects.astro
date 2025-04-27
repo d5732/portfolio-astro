@@ -15,7 +15,7 @@ const { projects } = info;
 
   <body>
     <Layout>
-      <section>
+      <article>
         <h1 style="line-height: 1.2;">Projects</h1>
         <div class="grid grid-cols-1">
           {
@@ -23,7 +23,7 @@ const { projects } = info;
               const isLast = index === arr.length - 1;
               return (
                 <>
-                  <ProjectDetail {...project} isLazy={index > 0} />
+                  <ProjectDetail {...project} lazyLoadImg={index > 0} />
                   {!isLast && (
                     <hr class="my-12 h-0.5 border-t-0 bg-neutral-100 dark:bg-white/10" />
                   )}
@@ -32,7 +32,7 @@ const { projects } = info;
             })
           }
         </div>
-      </section>
+      </article>
     </Layout>
   </body>
 </html>

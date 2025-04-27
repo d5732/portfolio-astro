@@ -5,7 +5,7 @@ import Hero from "@components/home/Hero.astro";
 import ProjectsWrapper from "@components/home/ProjectsWrapper.astro";
 import { info } from "@data";
 import Layout from "@layouts/Layout.astro";
-import type { IProject } from "../types";
+import type { IProject } from "@types";
 
 const featuredLimit = 6;
 const featuredProjects = info.projects.reduce<IProject[]>((acc, project) => {

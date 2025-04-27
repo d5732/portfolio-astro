@@ -32,19 +32,21 @@ export interface IProjectsWrapperProps {
   projects: IProject[];
 }
 
+export const enum Page {
+  Home = "home",
+  About = "about",
+  Contact = "contact",
+  Projects = "projects",
+}
+
 export interface IInfo {
   baseUrl: string;
   openGraphImageUrl: string;
   resumeUrl: string;
-  pages: string[];
-  metaDescriptions: {
-    home: string;
-    about: string;
-    contact: string;
-    projects: string;
-  };
+  pages: Page[];
+  metaDescriptions: Record<Page, string>;
   name: string;
-  profession: string;
+  subtitle: string;
   socialMedia: {
     github: string;
     email: string;
