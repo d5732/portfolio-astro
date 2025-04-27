@@ -60,10 +60,13 @@ import NavDesktop from "./NavDesktop.astro";
   };
 
   const initTheme = () => {
-    if (
-      localStorage.getItem("theme") === Theme.Dark ||
-      matchMedia("(prefers-color-scheme: dark)").matches
-    ) {
+    const localStorageTheme = localStorage.getItem("theme") as Theme;
+    // Validate
+    if ([Theme.Dark, Theme.Light].includes(localStorageTheme)) {
+      setTheme(localStorageTheme);
+
+      // Otherwise, fallback to system preference
+    } else if (matchMedia("(prefers-color-scheme: dark)").matches) {
       setTheme(Theme.Dark);
     } else {
       setTheme(Theme.Light);
