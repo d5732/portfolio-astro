@@ -20,50 +20,57 @@ import NavDesktop from "./NavDesktop.astro";
 
 <script>
   const enum Theme {
-    dark = "dark",
-    light = "light",
+    Dark = "dark",
+    Light = "light",
   }
-  type ThemeConfig = {
+  interface ThemeConfigMap {
     themeColor: `#${string}`;
     icon: string;
     nextTheme: Theme;
+  }
+  const themeConfigMap: Record<Theme, ThemeConfigMap> = {
+    dark: {
+      themeColor: "#111111",
+      icon: /** Moon */ `<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-moon"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>`,
+      nextTheme: Theme.Light,
+    },
+    light: {
+      themeColor: "#FFFFFF",
+      icon: /** Sun */ `<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-sun"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>`,
+      nextTheme: Theme.Dark,
+    },
   };
-  type ThemeConfigMap = Record<Theme, ThemeConfig>;
 
-  // Icons
-  const moon = `<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-moon"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>`;
-  const sun = `<svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-sun"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>`;
-  const themeConfigMap: ThemeConfigMap = {
-    dark: { themeColor: "#111111", icon: moon, nextTheme: Theme.light },
-    light: { themeColor: "#FFFFFF", icon: sun, nextTheme: Theme.dark },
-  };
-
-  const themeColorMeta: HTMLMetaElement = document.querySelector(
+  const metaThemeColor: HTMLMetaElement = document.querySelector(
     '[name="theme-color"]'
   )!;
   const themeButton = document.getElementById("theme-button")!;
+
+  let currentTheme: Theme | undefined;
+
   const setTheme = (theme: Theme) => {
     currentTheme = theme;
-    themeColorMeta.content = themeConfigMap[theme].themeColor;
+    metaThemeColor.content = themeConfigMap[theme].themeColor;
     themeButton.innerHTML = themeConfigMap[theme].icon;
     document.documentElement.setAttribute("data-theme", theme);
     localStorage.theme = theme;
   };
 
-  // Initialize theme from saved, falling back to system preference
-  const themeFromLastVisit = [Theme.dark, Theme.light].find(
-    (theme) => localStorage.getItem("theme") === theme
-  );
-  let currentTheme = themeFromLastVisit;
-  currentTheme ??= matchMedia("(prefers-color-scheme: dark)").matches
-    ? Theme.dark
-    : Theme.light;
-
-  // Initialize theme
-  setTheme(currentTheme);
+  const initTheme = () => {
+    if (
+      localStorage.getItem("theme") === Theme.Dark ||
+      matchMedia("(prefers-color-scheme: dark)").matches
+    ) {
+      setTheme(Theme.Dark);
+    } else {
+      setTheme(Theme.Light);
+    }
+  };
 
   const handleThemeChange = () => {
     setTheme(themeConfigMap[currentTheme!].nextTheme);
   };
+
+  initTheme();
   themeButton.addEventListener("click", handleThemeChange);
 </script>
