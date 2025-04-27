@@ -9,7 +9,8 @@
     "preview": "astro preview",
     "astro": "astro",
     "format": "prettier --write ./**/*.{astro,css,js,cjs,mjs,ts,json,md}",
-    "lint": "eslint . --ext .astro,.js,.ts --fix"
+    "lint": "eslint . --ext .astro,.js,.ts --fix",
+    "fixup": "npm run format && npm run lint"
   },
   "devDependencies": {
     "@astrojs/sitemap": "^3.3.1",
