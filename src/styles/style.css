@@ -33,7 +33,7 @@
   p,
   li,
   a {
-    @apply font-inter text-dark-gray;
+    @apply font-inter text-lg leading-relaxed text-dark-gray;
   }
   #mobile-menu-nav {
     @apply bg-gradient-to-b from-light-transparent dark:from-dark-transparent;

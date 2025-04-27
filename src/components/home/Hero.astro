@@ -1,32 +1,30 @@
 ---
-interface Props {
-  name: string;
-  summary: string[];
-}
+import { info } from "../../data/info";
 
-const { name, summary } = Astro.props;
+const { name, profession, summary } = info;
 const avatar_url = "https://avatars.githubusercontent.com/u/113398750?v=4";
 ---
 
-<section class="mb-32">
-  <div class="mt-[0px] mb-10 flex flex-wrap justify-between sm:mt-[141px]">
+<section>
+  <div class="mb-8 flex flex-wrap justify-between">
     <div class="w-full dark:text-light">
-      <div class="mt-8 flex items-center justify-between">
+      <div class="mt-8 flex items-end justify-between">
         <div class="flex flex-col">
-          <div>
-            <div class="mt-4 mb-4 text-lg leading-none dark:text-light">
-              Hello, I am
-            </div>
-            <h1 class="mt-0 mb-4 flex flex-wrap">
-              {name}
-            </h1>
+          <div class="mt-10 mb-0 text-sm leading-none dark:text-light">
+            Hello, I am
           </div>
+          <h1 class="flex flex-wrap">
+            {name}
+          </h1>
+          <h2 class="mt-0">
+            {profession}
+          </h2>
         </div>
         <picture>
           <source srcset={avatar_url} media="(min-width: 1024px)" />
           <img
             id="avatar"
-            class="hidden h-52 w-52 rounded-lg lg:block"
+            class="hidden h-60 w-60 rounded-lg lg:block"
             src=""
             alt=""
           />
@@ -34,5 +32,11 @@ const avatar_url = "https://avatars.githubusercontent.com/u/113398750?v=4";
       </div>
     </div>
   </div>
-  {summary.map((p) => <p class="mb-2 text-lg dark:text-light">{p}</p>)}
+  <div class="mx-auto">
+    {
+      summary.map((p) => (
+        <p class="mb-8 max-w-lg text-lg leading-relaxed dark:text-light">{p}</p>
+      ))
+    }
+  </div>
 </section>

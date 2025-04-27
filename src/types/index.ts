@@ -13,8 +13,8 @@ export interface IExperience {
 }
 
 export interface IExperienceProps {
-  title: string;
-  details: IExperience[];
+  heading: string;
+  items: IExperience[];
 }
 
 export interface IProject {
@@ -44,7 +44,7 @@ export interface IInfo {
     projects: string;
   };
   name: string;
-  jobDescription: string;
+  profession: string;
   socialMedia: {
     github: string;
     email: string;

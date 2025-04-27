@@ -5,6 +5,6 @@ import ProjectCard from "./ProjectCard.astro";
 const { projects } = info;
 ---
 
-<div class="my-16 grid grid-cols-1 gap-4 md:grid-cols-2">
+<div class="my-12 grid grid-cols-1 gap-4 md:grid-cols-2">
   {projects.map((project) => <ProjectCard project={project} />)}
 </div>

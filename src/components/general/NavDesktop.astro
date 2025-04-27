@@ -10,7 +10,7 @@ import { capitalize, getPageUri } from "@utils";
       info.pages.map((page) => (
         <li>
           <a
-            class="hidden p-4 text-lg dark:text-light sm:block"
+            class="lh-4 hidden p-4 text-lg leading-relaxed dark:text-light sm:block"
             href={`/${getPageUri(page)}`}
           >
             {capitalize(page)}
@@ -29,7 +29,7 @@ import { capitalize, getPageUri } from "@utils";
       <button
         aria-label="mobile-menu-button"
         id="mobile-menu-button"
-        class="ml-2 block rounded-lg bg-slate-200 p-4 text-lg dark:bg-[#202020] dark:text-light sm:hidden"
+        class="ml-2 block rounded-lg bg-slate-200 p-4 text-lg leading-relaxed dark:bg-[#202020] dark:text-light sm:hidden"
       >
         <svg
           id="mobile-menu-button-expand"

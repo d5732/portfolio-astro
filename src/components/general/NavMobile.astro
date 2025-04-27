@@ -13,7 +13,7 @@ import { getPageUri, capitalize } from "@utils";
       info.pages.map((pageName) => (
         <li>
           <a
-            class="block py-4 px-3 text-right text-lg dark:text-light"
+            class="block py-4 px-3 text-right text-lg leading-relaxed dark:text-light"
             href={`/${getPageUri(pageName)}`}
           >
             {capitalize(pageName)}

@@ -16,10 +16,12 @@ const { metaDescriptions, about } = info;
     <Layout>
       <section>
         <h1 style="line-height: 1.2;">About</h1>
-        <div class="my-16 w-full">
+        <div class="w-full">
           {
             about.map((item) => (
-              <p class="mb-8 text-lg dark:text-light">{item}</p>
+              <p class="mb-8 max-w-lg text-lg leading-relaxed dark:text-light">
+                {item}
+              </p>
             ))
           }
         </div>

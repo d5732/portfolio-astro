@@ -1,4 +1,4 @@
-import type { IInfo } from "../types";
+import type { IInfo } from "@types";
 
 function getYearsSinceDate(date: Date): number {
   const msPerYear = 365.25 * 24 * 60 * 60 * 1000;
@@ -24,7 +24,7 @@ export const info: IInfo = {
     projects: "My projects are available in this page.",
   },
   name: "Dennis Drueck",
-  jobDescription: "Software Engineer",
+  profession: "Software Engineer",
   socialMedia: {
     github: "https://github.com/denwa-dev",
     email: "Denwa.dev@gmail.com",
