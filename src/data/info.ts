@@ -24,7 +24,7 @@ export const info: IInfo = {
   name: "Dennis Drueck",
   jobDescription: "Full-Stack Developer",
   socialMedia: {
-    github: "https://github.com/d5732",
+    github: "https://github.com/denwa-dev",
     email: "Denwa.dev@gmail.com",
     linkedin: "https://www.linkedin.com/in/dennis-d-58764754/",
     medium: "https://medium.com/@denwa.dev",
@@ -188,7 +188,7 @@ export const info: IInfo = {
       isFeatured: true,
       thumbnail: "/assets/images/project-thumbnails/astro-portfolio-sm.jpg",
       image: "/assets/images/project-thumbnails/astro-portfolio.jpg",
-      githubUrl: "https://github.com/d5732/portfolio-astro",
+      githubUrl: "https://github.com/denwa-dev/portfolio-astro",
       description: [
         "Implemented 14 user stories to create a portfolio website, including reusable components, API data fetching, external strings, routing, CSS animations, responsive layouts, WCAG compliance, and light/dark mode.",
         "Selected Vercel and Astro.js framework for server-side rendering, reduced JavaScript bloat, and straightforward CI/CD pipeline.",
@@ -210,7 +210,7 @@ export const info: IInfo = {
       isFeatured: true,
       thumbnail: "/assets/images/project-thumbnails/twitter-clone-api-sm.jpg",
       image: "/assets/images/project-thumbnails/twitter-clone-api.jpg",
-      githubUrl: "https://github.com/d5732/twitter-clone-api",
+      githubUrl: "https://github.com/denwa-dev/twitter-clone-api",
       description: [
         "Created a REST API web service with Java Spring, including 30 HTTP endpoints to CRUD data related to accounts, tweets, hashtags, likes, follows, replies, and reposts.",
         "Tested and debugged API functionality using IntelliJ debugger, SQL Shell, and Postman, enabling rapid development of endpoints.",
@@ -239,7 +239,7 @@ export const info: IInfo = {
       thumbnail:
         "/assets/images/project-thumbnails/spotify-guessing-game-sm.jpg",
       image: "/assets/images/project-thumbnails/spotify-guessing-game.jpg",
-      githubUrl: "https://github.com/d5732/spotify-guessing-game",
+      githubUrl: "https://github.com/denwa-dev/spotify-guessing-game",
       description: [
         "Developed a stateful browser game, allowing users to play songs and guess the artist by fetching genres, artists, and songs from Spotify Web API.",
         "Implemented capability to play again with fresh data by creating configurable components and routes using React.js, Material UI, and React Router.",
@@ -265,7 +265,7 @@ export const info: IInfo = {
       thumbnail:
         "/assets/images/project-thumbnails/company-management-portal-sm.jpg",
       image: "/assets/images/project-thumbnails/company-management-portal.jpg",
-      githubUrl: "https://github.com/d5732/company-management-portal",
+      githubUrl: "https://github.com/denwa-dev/company-management-portal",
       description: [
         "Built a full-stack application that allows users to edit employees, announcements, teams, and projects using React.js, Java Spring, JPA, JDBC, and PostgreSQL.",
         "Clarified client expectations to ensure all features aligned with the customer's needs, creating distinct objectives for developers.",
@@ -297,7 +297,7 @@ export const info: IInfo = {
       thumbnail: "/assets/images/project-thumbnails/exercise-tracker-sm.jpg",
       image: "/assets/images/project-thumbnails/exercise-tracker.jpg",
       githubUrl:
-        "https://github.com/d5732/freeCodeCamp-certifications/tree/main/back-end-development-and-apis/exercise-tracker",
+        "https://github.com/denwa-dev/freeCodeCamp-certifications/tree/main/back-end-development-and-apis/exercise-tracker",
       description: [
         "Created a full-stack application that allows users to submit exercise sessions and review exercise history using JavaScript, Express.js, and MongoDB Atlas NoSQL cloud database.",
         "Built REST API web service, model, and controller functionality using Express.js.",
