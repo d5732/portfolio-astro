@@ -13,7 +13,7 @@ const { heading, items } = Astro.props;
   <div class="flex w-full flex-col gap-16">
     {
       items.map((item) => (
-        <div>
+        <article>
           <div class="flex flex-wrap items-start justify-between">
             <div>
               <h3 class="text-xl font-semibold">{item.title}</h3>
@@ -33,7 +33,7 @@ const { heading, items } = Astro.props;
                 <li
                   class:list={[
                     "max-w-lg list-disc dark:text-gray",
-                    { "mb-4": !isLast },
+                    { "mb-6": !isLast },
                   ]}
                 >
                   <div>{item}</div>
@@ -41,7 +41,7 @@ const { heading, items } = Astro.props;
               );
             })}
           </ul>
-        </div>
+        </article>
       ))
     }
   </div>
