@@ -26,12 +26,12 @@ export const info: IInfo = {
   name: "Dennis Drueck",
   subtitle: "I'm a Software Engineer based in Naperville, Illinois.",
   summary: [
-    `With ${yearsOfSoftwareEngineeringExperience} years of software development experience and ${yearsOfInformationTechnologyExperience} years in Information Technology, I can readily excel in any environment. My diverse background spans multinational corporations like Tesla and E. & J. Gallo, as well as start-ups and freelancing.`,
+    `With ${yearsOfSoftwareEngineeringExperience} years of software development experience and ${yearsOfInformationTechnologyExperience} years in Information Technology, I can readily excel in any environment. My diverse background spans multinational corporations, as well as start-ups and freelancing.`,
     "I've created pragmatic solutions to numerous complex problems, prioritizing scalability and engineering efficiency. Currently, I'm building full-stack frameworks for Tempus AI's DNA sequencing pipeline, improving delivery timelines, and streamlining user experience.",
     "My commitment to continuous learning and growth empowers me to tackle increasingly challenging issues and deliver high-impact, easy-to-maintain solutions.",
   ],
   about: [
-    `I've built software professionally for the past ${yearsOfSoftwareEngineeringExperience} years, and have more than ${yearsOfInformationTechnologyExperience} years of Information Technology experience overall. I've been privileged to work with some awesome companies like Tesla, E. & J. Gallo Winery, as well as some really cool startups.`,
+    `I've built software professionally for the past ${yearsOfSoftwareEngineeringExperience} years, and have more than ${yearsOfInformationTechnologyExperience} years of Information Technology experience overall. I've been privileged to work with some huge companies like E. & J. Gallo Winery, as well as some really cool startups like Martial Arts Technologies, a sports tournament platform, and Text2Drive, an automotive-focused communication and automation platform.`,
     "Growing up in the Chicago area, my family owned and operated one of the largest suppliers of Camaro parts in the United States, which gave me early insight into the intersection of business and technology.",
     "In 2019, I landed a position developing website widgets for a software as a service company. There, I used JavaScript, HTML, CSS, and Bootstrap to create a component library. I also automated processes related to data entry and report compilation using Python.",
     "Starting in 2021, I shifted into freelancing as a full-stack developer, mostly using the PERN stack to build web apps. I fell in love with the challenges of discovering requirements and delivering software rapidly keeping overhead low and negotiating the unexpected. Throughout that time, I have completed various certifications and educational programs to learn additional frameworks, and design patterns,",
