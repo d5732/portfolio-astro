@@ -10,7 +10,7 @@ import { capitalize, getPageUri } from "@utils";
       info.pages.map((page) => (
         <li>
           <a
-            class="lh-4 hidden p-4 text-lg leading-relaxed dark:text-light sm:block"
+            class="lh-4 hidden p-4 text-lg leading-relaxed hover:opacity-80 dark:text-light sm:block"
             href={`/${getPageUri(page)}`}
           >
             {capitalize(page)}
@@ -22,7 +22,7 @@ import { capitalize, getPageUri } from "@utils";
       <button
         aria-label="theme-button"
         id="theme-button"
-        class="ml-2 rounded-lg bg-slate-200 p-4 dark:bg-[#202020] dark:text-light"
+        class="ml-2 rounded-lg bg-slate-200 p-4 hover:opacity-80 dark:bg-[#202020] dark:text-light"
       ></button>
     </li>
     <li>

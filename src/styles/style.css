@@ -39,9 +39,9 @@
     @apply bg-gradient-to-b from-light-transparent dark:from-dark-transparent;
   }
   .footer-icons {
-    @apply flex items-center justify-center rounded-lg border border-dark p-4 dark:border-light dark:text-light;
+    @apply flex items-center justify-center rounded-lg border border-dark p-4 hover:opacity-80 dark:border-light dark:text-light;
   }
   .download-resume {
-    @apply flex items-center justify-center rounded-lg border border-dark p-4 dark:border-light dark:text-light;
+    @apply flex items-center justify-center rounded-lg border border-dark p-4 hover:opacity-80 dark:border-light dark:text-light;
   }
 }
